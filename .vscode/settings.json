@@ -1,0 +1,5 @@
+{
+  // "dart.flutterSdkPath": ".fvm/versions/stable",
+    "dart.flutterSdkPath": "D:/tools/flutter",
+  "java.configuration.updateBuildConfiguration": "interactive"
+}
