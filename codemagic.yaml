@@ -5,7 +5,7 @@ workflows:
     max_build_duration: 60
 
     integrations:
-      app_store_connect: Abiya tech dev team
+      app_store_connect: H4BZTYT6T3
       
     environment:
       flutter: stable
