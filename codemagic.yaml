@@ -4,6 +4,9 @@ workflows:
 
     max_build_duration: 60
 
+    integrations:
+      app_store_connect: Abiya tech 2026
+      
     environment:
       flutter: stable
       xcode: latest
