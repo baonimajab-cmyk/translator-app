@@ -6,7 +6,7 @@ workflows:
 
     integrations:
       app_store_connect: Abiya-CodeMagic
-      
+
     environment:
       flutter: stable
       xcode: latest
@@ -19,17 +19,21 @@ workflows:
         BUNDLE_ID: com.abiya.translator
 
     scripts:
-      - name: Clean
+      - name: Clean project
         script: |
           flutter clean
 
-      - name: Get packages
+      - name: Get dependencies
         script: |
           flutter pub get
 
-      - name: Set iOS bundle identifier
+      - name: Set up iOS signing
         script: |
           xcode-project use-profiles
+
+      - name: Build IPA
+        script: |
+          flutter build ipa --release
 
     artifacts:
       - build/ios/ipa/*.ipa
