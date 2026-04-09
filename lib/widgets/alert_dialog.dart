@@ -118,11 +118,11 @@ class Alert {
                       )),
                   const SizedBox(height: 10),
                   MongolFilledButton(
-                      style: ButtonStyle(
-                        backgroundColor: WidgetStateProperty.all(
-                            Themes.greyButtonBackgroundColor),
-                        foregroundColor: WidgetStateProperty.all(Colors.red),
-                      ),
+                      // style: ButtonStyle(
+                      //   backgroundColor: WidgetStateProperty.all(
+                      //       Themes.greyButtonBackgroundColor),
+                      //   foregroundColor: WidgetStateProperty.all(Colors.red),
+                      // ),
                       onPressed: () {
                         Navigator.pop(context);
                         if (onCancel != null) {
@@ -134,7 +134,7 @@ class Alert {
                         child: MongolText(
                           textCancel,
                           style: const TextStyle(
-                              fontFamily: 'NotoSans', color: Colors.red),
+                              fontFamily: 'NotoSans', color: Colors.white),
                         ),
                       )),
                 ]),

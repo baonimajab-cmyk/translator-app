@@ -33,9 +33,6 @@ class Themes {
               borderSide: BorderSide.none,
               borderRadius: BorderRadius.circular(8))),
       appBarTheme: const AppBarTheme(
-          shape: Border(
-              bottom:
-                  BorderSide(width: 1, color: Color.fromARGB(153, 54, 54, 54))),
           foregroundColor: Colors.white,
           backgroundColor: Colors.black,
           systemOverlayStyle: SystemUiOverlayStyle(
@@ -100,9 +97,6 @@ class Themes {
               borderSide: BorderSide.none,
               borderRadius: BorderRadius.circular(8))),
       appBarTheme: const AppBarTheme(
-          shape: Border(
-              bottom:
-                  BorderSide(width: 1, color: Color.fromARGB(30, 60, 60, 67))),
           foregroundColor: Colors.black,
           backgroundColor: Colors.white,
           systemOverlayStyle: SystemUiOverlayStyle(

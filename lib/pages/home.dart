@@ -163,12 +163,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   ? Theme.of(context).scaffoldBackgroundColor
                   : Theme.of(context).colorScheme.surface,
               appBar: AppBar(
-                shape: Border(
-                  bottom: BorderSide(
-                    width: UiHelper.getDividerWidth(context),
-                    color: Theme.of(context).colorScheme.outline,
-                  ),
-                ),
                 bottom: translating
                     ? PreferredSize(
                         preferredSize: const Size.fromHeight(1),
@@ -590,6 +584,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ToastHelper.show(AppLocalizations.of(context)!.alertEmptyString);
       return;
     }
+    focusNode.unfocus();
     setState(() {
       translating = true;
       addedFavourite = false;

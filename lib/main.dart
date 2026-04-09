@@ -6,6 +6,7 @@ import 'package:abiya_translator/pages/home_web.dart';
 import 'package:abiya_translator/utils/language_setting.dart';
 import 'package:abiya_translator/utils/system_setting.dart';
 import 'package:abiya_translator/utils/themes.dart';
+import 'package:abiya_translator/utils/ui_helper.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -55,6 +56,16 @@ class MyAppState extends State<MyApp> {
             child: MaterialApp(
               title: 'Abiya Translator',
               debugShowCheckedModeBanner: false,
+              builder: (context, child) {
+                return Theme(
+                  data: Theme.of(context).copyWith(
+                    appBarTheme: Theme.of(context).appBarTheme.copyWith(
+                      shape: UiHelper.appBarBottomBorder(context),
+                    ),
+                  ),
+                  child: child ?? const SizedBox.shrink(),
+                );
+              },
               localizationsDelegates: const [
                 AppLocalizations.delegate,
                 GlobalMaterialLocalizations.delegate,
