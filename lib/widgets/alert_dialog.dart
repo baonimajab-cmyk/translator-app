@@ -121,8 +121,7 @@ class Alert {
                       style: ButtonStyle(
                         backgroundColor: WidgetStateProperty.all(
                             Themes.greyButtonBackgroundColor),
-                        foregroundColor:
-                            WidgetStateProperty.all(Colors.red),
+                        foregroundColor: WidgetStateProperty.all(Colors.red),
                       ),
                       onPressed: () {
                         Navigator.pop(context);
@@ -181,7 +180,7 @@ class Alert {
           content: content,
           actions: <Widget>[
             if (textCancel.isNotEmpty)
-              GreyRoundedButton(
+              RedRoundedButton(
                 label: textCancel,
                 fill: true,
                 loading: false,
@@ -191,9 +190,20 @@ class Alert {
                     onCancel();
                   }
                 },
-                backgroundColor: Themes.greyButtonBackgroundColor,
-                forgroundColor: Colors.red,
               ),
+            // GreyRoundedButton(
+            //   label: textCancel,
+            //   fill: true,
+            //   loading: false,
+            //   onClick: () {
+            //     Navigator.pop(context);
+            //     if (onCancel != null) {
+            //       onCancel();
+            //     }
+            //   },
+            //   backgroundColor: Themes.greyButtonBackgroundColor,
+            //   forgroundColor: Colors.red,
+            // ),
             RedRoundedButton(
               label: textConfirm,
               loading: false,

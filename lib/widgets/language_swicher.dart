@@ -1,7 +1,6 @@
 import 'package:abiya_translator/api/responses.dart';
 import 'package:abiya_translator/l10n/app_localizations.dart';
 import 'package:abiya_translator/utils/language_setting.dart';
-import 'package:abiya_translator/utils/themes.dart';
 import 'package:abiya_translator/utils/logger.dart';
 import 'package:abiya_translator/utils/toast_helper.dart';
 import 'package:abiya_translator/widgets/language_selection_pane.dart';
@@ -122,7 +121,7 @@ class LanguageSwitcherState extends State<LanguageSwicher> {
             },
                 languageList: sourceLanguages,
                 ignoreSupport: widget.ignoreUnsupport,
-                backgroundColor: Themes.greyButtonBackgroundColor),
+                backgroundColor: widget.buttonColor),
             IconButton(
                 onPressed: () {
                   if (!supportReverse && !widget.ignoreUnsupport) {
@@ -159,7 +158,7 @@ class LanguageSwitcherState extends State<LanguageSwicher> {
             },
                 languageList: targetLanguages,
                 ignoreSupport: widget.ignoreUnsupport,
-                backgroundColor: Themes.greyButtonBackgroundColor),
+                backgroundColor: widget.buttonColor),
           ],
         );
       },

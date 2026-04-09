@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 class Themes {
   static const primary = Color.fromARGB(255, 255, 0, 0);
   static const primaryColor = primary;
-  static const greyButtonBackgroundColor= Colors.black12;
+  static const greyButtonBackgroundColor = Colors.black12;
   static final darkTheme = ThemeData(
       useMaterial3: false,
       primaryColor: Colors.black54,
@@ -87,7 +87,7 @@ class Themes {
       colorScheme: const ColorScheme.dark(
         primary: primary,
         surface: Colors.white,
-        secondary: Color.fromARGB(255, 242, 242, 247),
+        secondary: Colors.black12,
         onSecondary: Colors.black87,
         onSurface: Colors.black87,
         onPrimary: Colors.black,

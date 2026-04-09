@@ -65,6 +65,26 @@ class _MyHomePageState extends State<MyHomePage> {
     registerDevice();
   }
 
+  /// 多行输入时部分 IME 仍会把回车当作换行而不触发 [onSubmitted]，
+  /// 末尾换行则视为“发送”并去掉该换行。
+  void _onTranslationInputTextChanged(String text) {
+    if (text.endsWith('\n')) {
+      final trimmed = text.substring(0, text.length - 1);
+      editingController!.value = TextEditingValue(
+        text: trimmed,
+        selection: TextSelection.collapsed(offset: trimmed.length),
+      );
+      setState(() {
+        curLength = trimmed.characters.length;
+      });
+      translate();
+      return;
+    }
+    setState(() {
+      curLength = text.characters.length;
+    });
+  }
+
   void registerDevice() async {
     if (!GetIt.I.isRegistered<DeviceHelper>()) {
       GetIt.I.registerSingleton(DeviceHelper());
@@ -143,6 +163,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   ? Theme.of(context).scaffoldBackgroundColor
                   : Theme.of(context).colorScheme.surface,
               appBar: AppBar(
+                shape: Border(
+                  bottom: BorderSide(
+                    width: UiHelper.getDividerWidth(context),
+                    color: Theme.of(context).colorScheme.outline,
+                  ),
+                ),
                 bottom: translating
                     ? PreferredSize(
                         preferredSize: const Size.fromHeight(1),
@@ -212,7 +238,7 @@ class _MyHomePageState extends State<MyHomePage> {
         );
       } else {
         return Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 5.0),
+          padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 10.0),
           child: Text(
             translating
                 ? AppLocalizations.of(context)!.hintTranslating
@@ -241,7 +267,7 @@ class _MyHomePageState extends State<MyHomePage> {
       );
     } else {
       return SingleChildScrollView(
-          padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 2.0),
+          padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 10.0),
           child: Text(
             translateResponse != null
                 ? translateResponse!.result
@@ -274,7 +300,8 @@ class _MyHomePageState extends State<MyHomePage> {
             focusNode.requestFocus();
           },
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 12.0),
+            padding:
+                const EdgeInsets.symmetric(horizontal: 12.0, vertical: 12.0),
             child: MongolText(
               AppLocalizations.of(context)!.hintTranslationInput,
               textAlign: MongolTextAlign.top,
@@ -297,13 +324,9 @@ class _MyHomePageState extends State<MyHomePage> {
         expands: true,
         focusNode: focusNode,
         controller: editingController,
-        textInputAction: TextInputAction.done,
-        onSubmitted: (value) => {translate()},
-        onChanged: (text) {
-          setState(() {
-            curLength = text.characters.length;
-          });
-        },
+        textInputAction: TextInputAction.send,
+        onSubmitted: (value) => translate(),
+        onChanged: _onTranslationInputTextChanged,
         onTapOutside: (event) {
           FocusManager.instance.primaryFocus?.unfocus();
         },
@@ -311,17 +334,17 @@ class _MyHomePageState extends State<MyHomePage> {
             fontSize: 18,
             fontFamily: 'NotoSans',
             color: Theme.of(context).colorScheme.onPrimary),
-            decoration: InputDecoration(
-              contentPadding:
-                  const EdgeInsets.symmetric(horizontal: 12.0, vertical: 5.0),
-              border: InputBorder.none,
-              counterText: '',
-              hintText: AppLocalizations.of(context)!.hintTranslationInput,
-              fillColor: systemSetting.isDarkMode(context)
-                  ? Theme.of(context).scaffoldBackgroundColor
-                  : Theme.of(context).colorScheme.surface,
-              hintStyle:
-                  TextStyle(fontSize: 18, color: Theme.of(context).hintColor)),
+        decoration: InputDecoration(
+            contentPadding:
+                const EdgeInsets.symmetric(horizontal: 12.0, vertical: 10.0),
+            border: InputBorder.none,
+            counterText: '',
+            hintText: AppLocalizations.of(context)!.hintTranslationInput,
+            fillColor: systemSetting.isDarkMode(context)
+                ? Theme.of(context).scaffoldBackgroundColor
+                : Theme.of(context).colorScheme.surface,
+            hintStyle:
+                TextStyle(fontSize: 18, color: Theme.of(context).hintColor)),
       );
     } else {
       return TextField(
@@ -331,13 +354,9 @@ class _MyHomePageState extends State<MyHomePage> {
         expands: true,
         focusNode: focusNode,
         controller: editingController,
-        textInputAction: TextInputAction.done,
-        onSubmitted: (value) => {translate()},
-        onChanged: (text) {
-          setState(() {
-            curLength = text.characters.length;
-          });
-        },
+        textInputAction: TextInputAction.send,
+        onSubmitted: (value) => translate(),
+        onChanged: _onTranslationInputTextChanged,
         onTapOutside: (event) {
           FocusManager.instance.primaryFocus?.unfocus();
         },
@@ -346,8 +365,9 @@ class _MyHomePageState extends State<MyHomePage> {
             color: Theme.of(context).colorScheme.onPrimary,
             fontWeight: FontWeight.w600),
         decoration: InputDecoration(
-            contentPadding:
-                const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
+            contentPadding: EdgeInsets.symmetric(
+                horizontal: 12.0,
+                vertical: editingController!.text.isEmpty ? 12.0 : 8.0),
             border: InputBorder.none,
             counterText: '',
             hintText: AppLocalizations.of(context)!.hintTranslationInput,

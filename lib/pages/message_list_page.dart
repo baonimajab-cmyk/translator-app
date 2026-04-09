@@ -123,8 +123,7 @@ class MessageItemView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var dt = DateTime.fromMillisecondsSinceEpoch(data.time * 1000);
-    // var df = DateFormat('MM/dd/yyyy, HH:mm').format(dt);
-    var df = DateFormat('dd/MM HH:mm').format(dt);
+    var df = DateFormat('yyyy-MM-dd').format(dt);
     var dateColor = Theme.of(context).hintColor;
     return Padding(
       padding: UiHelper.isVerticalUI()
