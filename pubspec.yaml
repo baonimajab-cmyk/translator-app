@@ -70,7 +70,7 @@ wechat_kit:
   universal_link: https://www.abiya-tech.com/app
 
 tobias:
-  url_scheme: abiya_translator
+  url_scheme: abiya-translator
   ios:
     ignore_security: true
     universal_link: https://www.abiya-tech.com/app
