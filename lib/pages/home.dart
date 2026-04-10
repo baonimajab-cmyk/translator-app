@@ -482,6 +482,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       MongolText('$curLength/$maxLength',
                           style: TextStyle(
                               fontSize: 14,
+                              fontFamily: 'NotoSans',
                               color: Theme.of(context).hintColor)),
                     ],
                   ),

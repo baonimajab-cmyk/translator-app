@@ -325,6 +325,7 @@ class UserBanner extends StatelessWidget {
                     style: TextStyle(
                         fontSize: 16,
                         color: Theme.of(context).colorScheme.onSurface,
+                        fontFamily: 'NotoSans',
                         fontWeight: FontWeight.bold),
                   ),
                   userInfo == null || !userInfo!.isMember()

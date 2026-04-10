@@ -1387,6 +1387,7 @@ class PremiumRightItemWithIcon extends StatelessWidget {
             style: TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.bold,
+                fontFamily: 'NotoSans',
                 color: Theme.of(context).colorScheme.primary),
           ),
           SizedBox(
@@ -1674,6 +1675,7 @@ class UserBanner extends StatelessWidget {
                       style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
+                          fontFamily: 'NotoSans',
                           color: Theme.of(context).colorScheme.onSurface)),
                   const SizedBox(
                     height: 4,
@@ -1697,7 +1699,8 @@ class UserBanner extends StatelessWidget {
                           : AppLocalizations.of(context)!.textNotMembership,
                       style: TextStyle(
                           color: Theme.of(context).colorScheme.onSecondary,
-                          fontSize: 14),
+                          fontSize: 14,
+                          fontFamily: 'NotoSans'),
                     ),
             ],
           ),
@@ -1877,7 +1880,8 @@ class GoPremiumButtonState extends State<GoPremiumButton> {
                           style: TextStyle(
                               fontSize: 16,
                               color: forgroundColor,
-                              fontWeight: FontWeight.bold),
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'NotoSans'),
                         ),
                       )
                     : Text(

@@ -243,7 +243,7 @@ class AppLocalizationsMo extends AppLocalizations {
 
   @override
   String get textNotMembership =>
-      'ᠭᠡᠰᠢᠭᠦᠨ ᠬᠡᠷᠡᠭᠯᠡᠭᠴᠢ ᠪᠣᠯᠭᠠᠨ᠂ ᠨᠡᠩ ᠣᠯᠠᠨ ᠴᠢᠳᠠᠮᠵᠢ ᠶᠢ ᠠᠰᠢᠭᠯᠠᠭᠠᠷᠠᠢ！';
+      'ᠭᠡᠰᠢᠭᠦᠨ ᠬᠡᠷᠡᠭᠯᠡᠭᠴᠢ ᠪᠣᠯᠭᠠᠨ᠂ ᠨᠡᠩ ᠣᠯᠠᠨ ᠴᠢᠳᠠᠮᠵᠢ᠎ᠶᠢ ᠠᠰᠢᠭᠯᠠᠭᠠᠷᠠᠢ！';
 
   @override
   String get textAppIntroduction =>
