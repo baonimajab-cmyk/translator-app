@@ -85,9 +85,11 @@ class _CheckEmailViewState extends State<CheckEmailView> {
               ),
         const Spacer(),
         RedRoundedButton(
-            label: AppLocalizations.of(context)!.textButtonNext,
-            loading: loading,
-            onClick: () => {checkEmail(emailController.text.trim())}),
+          label: AppLocalizations.of(context)!.textButtonNext,
+          loading: loading,
+          onClick: () => {checkEmail(emailController.text.trim())},
+          fill: true,
+        ),
         const SizedBox(
           height: 34,
         )

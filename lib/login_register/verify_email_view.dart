@@ -159,9 +159,11 @@ class _VerifyCodeView extends State<VerifyEmailView> {
         Align(
           alignment: Alignment.bottomRight,
           child: RedRoundedButton(
-              label: AppLocalizations.of(context)!.textButtonVerify,
-              loading: loading,
-              onClick: () => verifyCode()),
+            label: AppLocalizations.of(context)!.textButtonVerify,
+            loading: loading,
+            onClick: () => verifyCode(),
+            fill: true,
+          ),
         ),
       ],
     );
@@ -247,9 +249,11 @@ class _VerifyCodeView extends State<VerifyEmailView> {
         errMsg.isEmpty ? Container() : ErrMsgView(errMsg: errMsg),
         const Spacer(),
         RedRoundedButton(
-            label: AppLocalizations.of(context)!.textButtonVerify,
-            loading: loading,
-            onClick: () => verifyCode()),
+          label: AppLocalizations.of(context)!.textButtonVerify,
+          loading: loading,
+          onClick: () => verifyCode(),
+          fill: true,
+        ),
         const SizedBox(
           height: 34,
         )

@@ -173,14 +173,14 @@ class _LoginViewState extends State<LoginView> {
                   fill: true,
                 ),
                 const SizedBox(width: 20),
-                GreyRoundedButton(
+                RedRoundedButton(
                   label: AppLocalizations.of(context)!.textRegisterNewAccount,
                   width: 60,
                   loading: false,
                   onClick: () {
                     widget.onRegisterNewAccount();
                   },
-                  fill: false,
+                  fill: true,
                 ),
               ],
             ),
@@ -279,16 +279,14 @@ class _LoginViewState extends State<LoginView> {
         const SizedBox(
           height: 20,
         ),
-        InkWell(
-          onTap: () {
+        RedRoundedButton(
+          label: AppLocalizations.of(context)!.textRegisterNewAccount,
+          loading: false,
+          onClick: () {
             widget.onRegisterNewAccount();
           },
-          child: Text(
-            AppLocalizations.of(context)!.textRegisterNewAccount,
-            style: TextStyle(
-                fontSize: 14, color: Theme.of(context).colorScheme.onSecondary),
-          ),
-        )
+          fill: true,
+        ),
       ],
     );
   }

@@ -271,6 +271,7 @@ class _FirstUsePageOneState extends State<FirstUsePageOne> {
               onClickContinue();
             },
             loading: false,
+            fill: true,
           ),
           const SizedBox(
             height: 34,
