@@ -493,4 +493,19 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get toastProfessionSetSuccess => '職業設定が成功しました。';
+
+  @override
+  String get textSubscriptionAutoRenewGoogle =>
+      '自動更新、いつでも解約可能。\nGoogle Play アカウントでサブスクリプションを管理できます。';
+
+  @override
+  String get textSubscriptionAutoRenewApple =>
+      '自動更新、いつでも解約可能。\nApple ID のアカウント設定でサブスクリプションを管理できます。';
+
+  @override
+  String get textSubscriptionTerms => 'サブスクリプションの説明';
+
+  @override
+  String get textGooglePlayProductUnavailable =>
+      'このデバイスではアプリ内課金をご利用いただけません。参考価格を表示する場合があります。';
 }

@@ -32,6 +32,8 @@ import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:mongol/mongol.dart';
 import 'package:wechat_kit/wechat_kit.dart';
 
+import 'package:abiya_translator/config/app_platform.dart';
+
 const Set<String> appleIdList = <String>{
   'abiya_translator_membership_1_month',
   'abiya_translator_member_3_months',
@@ -73,9 +75,12 @@ class MembershipPageState extends State<MembershipPage> {
     if (Platform.isIOS) {
       initIapPurchase(false);
     } else if (Platform.isAndroid) {
-      initIapPurchase(true);
-      wechatPayHelper.initWechatPay(onWechatPayResponse);
-      getSubscriptionItems();
+      if (PlatformConfig.current == AppPlatform.google) {
+        initIapPurchase(true);
+      } else {
+        wechatPayHelper.initWechatPay(onWechatPayResponse);
+        getSubscriptionItems();
+      }
     }
   }
 
@@ -382,8 +387,15 @@ class MembershipPageState extends State<MembershipPage> {
       loading = true;
     });
     final bool isAvailable = await InAppPurchase.instance.isAvailable();
+    if (!mounted) {
+      return;
+    }
     if (!isAvailable) {
       Logger.log("IAP not available");
+      // toast 提示 用户支付环境不支持
+      ToastHelper.show(
+          AppLocalizations.of(context)!.textGooglePlayProductUnavailable);
+
       if (loadGoogleProducts) {
         getSubscriptionItems();
         return;
@@ -396,19 +408,31 @@ class MembershipPageState extends State<MembershipPage> {
 
     final ProductDetailsResponse response = await InAppPurchase.instance
         .queryProductDetails(loadGoogleProducts ? googleIdList : appleIdList);
+    if (!mounted) {
+      return;
+    }
     if (response.error != null) {
-      //error handling
       Logger.log(response.error.toString());
-      setState(() {
-        loading = false;
-      });
+      if (loadGoogleProducts) {
+        getSubscriptionItems();
+      } else {
+        setState(() {
+          loading = false;
+        });
+      }
+      return;
     }
 
     if (response.productDetails.isEmpty) {
       Logger.log("Product details empty.");
-      setState(() {
-        loading = false;
-      });
+      if (loadGoogleProducts) {
+        getSubscriptionItems();
+      } else {
+        setState(() {
+          loading = false;
+        });
+      }
+      return;
     }
 
     List<ProductDetails> products = response.productDetails;
@@ -426,9 +450,6 @@ class MembershipPageState extends State<MembershipPage> {
       //select last item by default
       selectedProductId = iapProductList.last.id;
     });
-    if (loadGoogleProducts && products.isEmpty) {
-      getSubscriptionItems();
-    }
   }
 
   void onPurchaseUpdate(List<PurchaseDetails> purchaseList) async {
@@ -529,6 +550,93 @@ class MembershipPageState extends State<MembershipPage> {
     }
   }
 
+  /// 布局与 [MembershipRightsView] 一致：isVerticalUI 为 Row + MongolText，否则 Column + Text。
+  Widget _buildSubscriptionNotice(BuildContext context) {
+    // 国内平台不显示订阅说明
+    if (PlatformConfig.current == AppPlatform.china) {
+      return const SizedBox.shrink();
+    }
+    final bool isVerticalUI = UiHelper.isVerticalUI();
+    final theme = Theme.of(context);
+    final cs = theme.colorScheme;
+    final double dividerW = UiHelper.getDividerWidth(context);
+
+    // 订阅说明标题
+    final String titleText =
+        AppLocalizations.of(context)!.textSubscriptionTerms;
+    // 订阅说明内容
+
+    String bodyText = PlatformConfig.current == AppPlatform.google
+        ? AppLocalizations.of(context)!.textSubscriptionAutoRenewGoogle
+        : AppLocalizations.of(context)!.textSubscriptionAutoRenewApple;
+
+    final TextStyle titleStyleMo = TextStyle(
+      fontSize: 18,
+      fontFamily: 'NotoSans',
+      fontWeight: FontWeight.bold,
+      color: cs.onSurface,
+    );
+    final TextStyle bodyStyleMo = TextStyle(
+      fontSize: 13,
+      height: 1.5,
+      fontFamily: 'NotoSans',
+      color: cs.onSurface.withValues(alpha: 0.82),
+    );
+    final TextStyle titleStyleH = theme.textTheme.titleSmall?.copyWith(
+          fontWeight: FontWeight.w600,
+          color: cs.onSurface,
+        ) ??
+        TextStyle(
+          fontSize: 15,
+          fontWeight: FontWeight.w600,
+          color: cs.onSurface,
+        );
+    final TextStyle bodyStyleH = TextStyle(
+      fontSize: 13,
+      height: 1.5,
+      color: cs.onSurface.withValues(alpha: 0.82),
+    );
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: cs.surface,
+        border: isVerticalUI
+            ? Border.symmetric(
+                vertical: BorderSide(
+                  width: dividerW,
+                  color: cs.outline,
+                ),
+              )
+            : Border.symmetric(
+                horizontal: BorderSide(
+                  width: dividerW,
+                  color: cs.outline,
+                ),
+              ),
+      ),
+      child: isVerticalUI
+          ? Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                MongolText(titleText, style: titleStyleMo),
+                const SizedBox(width: 5),
+                MongolText(bodyText, style: bodyStyleMo),
+              ],
+            )
+          : Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Align(
+                  alignment: Alignment.center,
+                  child: Text(titleText, style: titleStyleH),
+                ),
+                const SizedBox(height: 5),
+                Text(bodyText, style: bodyStyleH),
+              ],
+            ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -563,7 +671,7 @@ class MembershipPageState extends State<MembershipPage> {
                   child: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Padding(
-                      padding: const EdgeInsets.only(left: 20.0),
+                      padding: const EdgeInsets.only(left: 0.0),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
@@ -578,6 +686,7 @@ class MembershipPageState extends State<MembershipPage> {
                                 });
                               }),
                           const SizedBox(width: 20),
+                          _buildSubscriptionNotice(context),
                           const MembershipRightsView(),
                           AdaptiveListView(children: [
                             ListGroup(dividerMargin: 48, children: [
@@ -718,18 +827,20 @@ class MembershipPageState extends State<MembershipPage> {
                             const SizedBox(
                               height: 20,
                             ),
-                            productList.isEmpty
-                                ? Container()
-                                : ProductListView(
-                                    products: productList,
-                                    selectedProductId: selectedProductId,
-                                    onSelectProduct: (String id) {
-                                      setState(() {
-                                        selectedProductId = id;
-                                      });
-                                    }),
+                            ProductListView(
+                                products: productList,
+                                selectedProductId: selectedProductId,
+                                onSelectProduct: (String id) {
+                                  setState(() {
+                                    selectedProductId = id;
+                                  });
+                                }),
                             const SizedBox(
-                              height: 20,
+                              height: 5,
+                            ),
+                            _buildSubscriptionNotice(context),
+                            const SizedBox(
+                              height: 5,
                             ),
                             const MembershipRightsView(),
                             AdaptiveListView(
@@ -868,23 +979,60 @@ class MembershipPageState extends State<MembershipPage> {
     }
   }
 
+  ProductDetails? getIapProductDetail(SubscriptionProductItem item) {
+    String storeProductId = '';
+    if (Platform.isIOS) {
+      storeProductId = item.appStoreId;
+    } else if (Platform.isAndroid &&
+        PlatformConfig.current == AppPlatform.google) {
+      storeProductId = item.playStoreId;
+    }
+
+    if (storeProductId.isEmpty) {
+      return null;
+    }
+
+    for (final detail in iapProductList) {
+      if (detail.id == storeProductId) {
+        return detail;
+      }
+    }
+    return null;
+  }
+
+  String getProductDisplayPrice(SubscriptionProductItem item) {
+    final ProductDetails? iapDetail = getIapProductDetail(item);
+    if (iapDetail != null && iapDetail.price.isNotEmpty) {
+      return iapDetail.price;
+    }
+    return '${item.currency}${item.price}';
+  }
+
   void getSubscriptionItems() {
     HttpHelper<SubscriptionProductResponse>(SubscriptionProductResponse.new)
         .post(apiGetSubscriptionProducts, {}, onResponse: (response) {
+      if (!context.mounted) {
+        return;
+      }
       setState(() {
         loading = false;
-        productList = response.products
-            .map((item) => SubscriptionProductItem(
-                id: item.id,
-                name: item.name,
-                price: '${item.currency}${item.price}',
-                currency: item.currency,
-                appStoreId: item.appStoreId,
-                playStoreId: item.playStoreId))
-            .toList();
+        productList = response.products.map((item) {
+          return SubscriptionProductItem(
+              id: item.id,
+              name: item.name,
+              price: getProductDisplayPrice(item),
+              currency: item.currency,
+              appStoreId: item.appStoreId,
+              playStoreId: item.playStoreId);
+        }).toList();
       });
-      selectedProductId = productList.last.id;
+      if (productList.isNotEmpty) {
+        selectedProductId = productList.last.id;
+      }
     }, onError: (code, msg) {
+      if (!context.mounted) {
+        return;
+      }
       setState(() {
         loading = false;
       });

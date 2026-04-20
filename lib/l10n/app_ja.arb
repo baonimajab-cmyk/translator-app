@@ -155,5 +155,9 @@
     "alertModelNotSupported": "申し訳ございませんが、現在、この両言語間の翻訳には対応しておらず、対応に向けて全力で開発を進めております。",
     "textProfessionSelection": "職業選択",
     "hintSelectProfession": "あなたの職業を選択してください：",
-    "toastProfessionSetSuccess": "職業設定が成功しました。"
+    "toastProfessionSetSuccess": "職業設定が成功しました。",
+    "textSubscriptionAutoRenewGoogle": "自動更新、いつでも解約可能。\nGoogle Play アカウントでサブスクリプションを管理できます。",
+    "textSubscriptionAutoRenewApple": "自動更新、いつでも解約可能。\nApple ID のアカウント設定でサブスクリプションを管理できます。",
+    "textSubscriptionTerms": "サブスクリプションの説明",
+    "textGooglePlayProductUnavailable": "このデバイスではアプリ内課金をご利用いただけません。参考価格を表示する場合があります。"
 }

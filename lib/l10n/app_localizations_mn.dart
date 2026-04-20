@@ -509,4 +509,19 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String get toastProfessionSetSuccess => 'Ажлын байрыг амжилттай тохирууллаа.';
+
+  @override
+  String get textSubscriptionAutoRenewGoogle =>
+      'Автомат шинэчлэлт, хүссэн үедээ цуцалж болно.\nТа захиалгаа Google Play дугаараараа хамаарах боломжтой.';
+
+  @override
+  String get textSubscriptionAutoRenewApple =>
+      'Автомат шинэчлэлт, хүссэн үедээ цуцалж болно.\nТа захиалгаа Apple ID дансны тохиргоогоор хамаарах боломжтой.';
+
+  @override
+  String get textSubscriptionTerms => 'Захиалгын тайлбар';
+
+  @override
+  String get textGooglePlayProductUnavailable =>
+      'Энэ төхөөрөмж дээр апп доторх худалдан авалт боломжгүй. Урьдчилсан үнэ харуулж болно.';
 }

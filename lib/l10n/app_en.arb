@@ -155,5 +155,9 @@
     "alertModelNotSupported": "Sorry, translation between these two languages ​​is not currently supported, and we are working hard on research and development.",
     "textProfessionSelection": "Profession Selection",
     "hintSelectProfession": "Please select your profession:",
-    "toastProfessionSetSuccess": "Profession set successfully."
+    "toastProfessionSetSuccess": "Profession set successfully.",
+    "textSubscriptionAutoRenewGoogle": "Automatic renewal, cancel anytime.\nManage your subscription in your Google Play account.",
+    "textSubscriptionAutoRenewApple": "Automatic renewal, cancel anytime.\nManage your subscription in your Apple ID account settings.",
+    "textSubscriptionTerms": "Subscription Description",
+    "textGooglePlayProductUnavailable": "In-app purchases are not available on this device. Estimated prices may be shown."
 }

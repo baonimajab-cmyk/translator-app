@@ -511,4 +511,19 @@ class AppLocalizationsRo extends AppLocalizations {
   @override
   String get toastProfessionSetSuccess =>
       'ᠠᠵᠢᠯ᠎ᠤᠨ ᠪᠠᠢᠷᠢ᠎ᠶᠢ ᠠᠮᠵᠢᠯᠲᠠᠲᠠᠢ ᠲᠣᠬᠢᠷᠠᠭᠤᠯᠤᠯ᠎ᠠ᠃';
+
+  @override
+  String get textSubscriptionAutoRenewGoogle =>
+      'ᠠᠦ᠋ᠲ᠋ᠣᠮᠠᠲ ᠰᠢᠨᠡᠴᠢᠯᠡᠯᠲᠡ᠂ ᠬᠦᠰᠡᠭᠰᠡᠨ ᠦᠶ᠎ᠡ᠎ᠳᠡᠭᠡᠨ ᠦᠭᠡᠢᠰᠭᠡᠵᠦ ᠪᠣᠯᠤᠨ᠎ᠠ᠃\nᠲᠠ ᠵᠠᠬᠢᠶᠠᠯᠠᠭ᠎ᠠ᠎ᠪᠠᠨ Google Play ᠳ᠋ᠤᠭᠠᠷ᠎ᠢᠶᠠᠷ᠎ᠢᠶᠠᠨ ᠬᠠᠮᠢᠶᠠᠷᠬᠤ ᠪᠣᠯᠤᠮᠵᠢ᠎ᠲᠠᠢ᠃';
+
+  @override
+  String get textSubscriptionAutoRenewApple =>
+      'ᠠᠦ᠋ᠲ᠋ᠣᠮᠠᠲ ᠰᠢᠨᠡᠴᠢᠯᠡᠯᠲᠡ᠂ ᠬᠦᠰᠡᠭᠰᠡᠨ ᠦᠶ᠎ᠡ᠎ᠳᠡᠭᠡᠨ ᠦᠭᠡᠢᠰᠭᠡᠵᠦ ᠪᠣᠯᠤᠨ᠎ᠠ᠃\nᠲᠠ ᠵᠠᠬᠢᠶᠠᠯᠠᠭ᠎ᠠ᠎ᠪᠠᠨ Apple ID ᠳᠠᠩᠰᠠᠨ᠎ᠤ ᠲᠣᠬᠢᠷᠠᠭ᠎ᠠ᠎ᠪᠠᠷ ᠬᠠᠮᠢᠶᠠᠷᠬᠤ ᠪᠣᠯᠤᠮᠵᠢ᠎ᠲᠠᠢ᠃';
+
+  @override
+  String get textSubscriptionTerms => 'ᠵᠠᠬᠢᠶᠠᠯᠭ᠎ᠠ ᠶᠢᠨ ᠲᠠᠢᠯᠪᠤᠷ';
+
+  @override
+  String get textGooglePlayProductUnavailable =>
+      'In-app purchases are not available on this device. Estimated prices may be shown.';
 }

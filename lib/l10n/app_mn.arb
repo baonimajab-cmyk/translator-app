@@ -155,5 +155,9 @@
     "alertModelNotSupported": "Уучлаарай, одоохонд тус хоёр хэлний хоорондох орчуулааг дэмжихгүй, бид яг бөх хүчээрээ судлан нээж байна.",
     "textProfessionSelection": "Ажлын байр",
     "hintSelectProfession": "Та ашиглах ажлын байрыг сонгоорой:",
-    "toastProfessionSetSuccess": "Ажлын байрыг амжилттай тохирууллаа."
+    "toastProfessionSetSuccess": "Ажлын байрыг амжилттай тохирууллаа.",
+    "textSubscriptionAutoRenewGoogle": "Автомат шинэчлэлт, хүссэн үедээ цуцалж болно.\nТа захиалгаа Google Play дугаараараа хамаарах боломжтой.",
+    "textSubscriptionAutoRenewApple": "Автомат шинэчлэлт, хүссэн үедээ цуцалж болно.\nТа захиалгаа Apple ID дансны тохиргоогоор хамаарах боломжтой.",
+    "textSubscriptionTerms": "Захиалгын тайлбар",
+    "textGooglePlayProductUnavailable": "Энэ төхөөрөмж дээр апп доторх худалдан авалт боломжгүй. Урьдчилсан үнэ харуулж болно."
 }

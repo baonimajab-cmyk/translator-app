@@ -155,5 +155,9 @@
     "alertModelNotSupported": "ᠠᠭᠤᠴᠢᠯᠠᠭᠠᠷᠠᠢ᠂ ᠣᠳᠣᠬᠠᠨ᠎ᠳᠤ ᠲᠤᠰ ᠬᠣᠶᠠᠷ ᠬᠡᠯᠡᠨ᠎ᠦ ᠬᠣᠭᠣᠷᠣᠨᠳᠣᠬᠢ ᠣᠷᠴᠢᠭᠤᠯᠭ᠎ᠠ᠎ᠶᠢ ᠳᠡᠮᠵᠢᠬᠦ᠎ᠦᠭᠡᠢ᠂ ᠪᠢᠳᠡ ᠶᠠᠭ ᠪᠥᠬᠥ ᠬᠦᠴᠦ᠎ᠪᠡᠷ᠎ᠢᠶᠡᠨ ᠰᠤᠳᠤᠯᠠᠨ ᠨᠡᠬᠡᠭᠡᠵᠦ ᠪᠠᠢᠨ᠎ᠠ᠃",
     "textProfessionSelection": "ᠠᠵᠢᠯ᠎ᠤᠨ ᠪᠠᠢᠷᠢ",
     "hintSelectProfession": "ᠲᠠ ᠠᠰᠢᠭᠯᠠᠬᠤ ᠠᠵᠢᠯ᠎ᠤᠨ ᠪᠠᠢᠷᠢ᠎ᠶᠢ ᠰᠣᠩᠭᠤᠭᠠᠷᠠᠢ:",
-    "toastProfessionSetSuccess": "ᠠᠵᠢᠯ᠎ᠤᠨ ᠪᠠᠢᠷᠢ᠎ᠶᠢ ᠠᠮᠵᠢᠯᠲᠠᠲᠠᠢ ᠲᠣᠬᠢᠷᠠᠭᠤᠯᠤᠯ᠎ᠠ᠃"
+    "toastProfessionSetSuccess": "ᠠᠵᠢᠯ᠎ᠤᠨ ᠪᠠᠢᠷᠢ᠎ᠶᠢ ᠠᠮᠵᠢᠯᠲᠠᠲᠠᠢ ᠲᠣᠬᠢᠷᠠᠭᠤᠯᠤᠯ᠎ᠠ᠃",
+    "textSubscriptionAutoRenewGoogle": "ᠠᠦ᠋ᠲ᠋ᠣᠮᠠᠲ ᠰᠢᠨᠡᠴᠢᠯᠡᠯᠲᠡ᠂ ᠬᠦᠰᠡᠭᠰᠡᠨ ᠦᠶ᠎ᠡ᠎ᠳᠡᠭᠡᠨ ᠦᠭᠡᠢᠰᠭᠡᠵᠦ ᠪᠣᠯᠤᠨ᠎ᠠ᠃\nᠲᠠ ᠵᠠᠬᠢᠶᠠᠯᠠᠭ᠎ᠠ᠎ᠪᠠᠨ Google Play ᠳ᠋ᠤᠭᠠᠷ᠎ᠢᠶᠠᠷ᠎ᠢᠶᠠᠨ ᠬᠠᠮᠢᠶᠠᠷᠬᠤ ᠪᠣᠯᠤᠮᠵᠢ᠎ᠲᠠᠢ᠃",
+    "textSubscriptionAutoRenewApple": "ᠠᠦ᠋ᠲ᠋ᠣᠮᠠᠲ ᠰᠢᠨᠡᠴᠢᠯᠡᠯᠲᠡ᠂ ᠬᠦᠰᠡᠭᠰᠡᠨ ᠦᠶ᠎ᠡ᠎ᠳᠡᠭᠡᠨ ᠦᠭᠡᠢᠰᠭᠡᠵᠦ ᠪᠣᠯᠤᠨ᠎ᠠ᠃\nᠲᠠ ᠵᠠᠬᠢᠶᠠᠯᠠᠭ᠎ᠠ᠎ᠪᠠᠨ Apple ID ᠳᠠᠩᠰᠠᠨ᠎ᠤ ᠲᠣᠬᠢᠷᠠᠭ᠎ᠠ᠎ᠪᠠᠷ ᠬᠠᠮᠢᠶᠠᠷᠬᠤ ᠪᠣᠯᠤᠮᠵᠢ᠎ᠲᠠᠢ᠃",
+    "textSubscriptionTerms": "ᠵᠠᠬᠢᠶᠠᠯᠭ᠎ᠠ ᠶᠢᠨ ᠲᠠᠢᠯᠪᠤᠷ",
+    "textGooglePlayProductUnavailable": "In-app purchases are not available on this device. Estimated prices may be shown."
 }

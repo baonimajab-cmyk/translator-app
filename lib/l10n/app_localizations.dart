@@ -1045,6 +1045,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Profession set successfully.'**
   String get toastProfessionSetSuccess;
+
+  /// No description provided for @textSubscriptionAutoRenewGoogle.
+  ///
+  /// In en, this message translates to:
+  /// **'Automatic renewal, cancel anytime.\nManage your subscription in your Google Play account.'**
+  String get textSubscriptionAutoRenewGoogle;
+
+  /// No description provided for @textSubscriptionAutoRenewApple.
+  ///
+  /// In en, this message translates to:
+  /// **'Automatic renewal, cancel anytime.\nManage your subscription in your Apple ID account settings.'**
+  String get textSubscriptionAutoRenewApple;
+
+  /// No description provided for @textSubscriptionTerms.
+  ///
+  /// In en, this message translates to:
+  /// **'Subscription Description'**
+  String get textSubscriptionTerms;
+
+  /// No description provided for @textGooglePlayProductUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'In-app purchases are not available on this device. Estimated prices may be shown.'**
+  String get textGooglePlayProductUnavailable;
 }
 
 class _AppLocalizationsDelegate

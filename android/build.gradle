@@ -9,12 +9,21 @@ rootProject.buildDir = '../build'
 subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
 }
-// 强制所有 Android 插件使用 compileSdk 34+（必须在 evaluationDependsOn 之前注册）
+// 强制所有 Android 插件使用 compileSdk 34+、Java 17（与 app 一致，避免各插件仍用 8 导致 javac 过时警告）
 subprojects { subproject ->
     subproject.afterEvaluate {
         if (subproject.plugins.hasPlugin("com.android.library")) {
             subproject.android {
                 compileSdkVersion 34
+                compileOptions {
+                    sourceCompatibility JavaVersion.VERSION_17
+                    targetCompatibility JavaVersion.VERSION_17
+                }
+            }
+        }
+        subproject.tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+            kotlinOptions {
+                jvmTarget = "17"
             }
         }
     }

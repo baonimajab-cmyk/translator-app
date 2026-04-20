@@ -504,4 +504,19 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get toastProfessionSetSuccess => 'Profession set successfully.';
+
+  @override
+  String get textSubscriptionAutoRenewGoogle =>
+      'Automatic renewal, cancel anytime.\nManage your subscription in your Google Play account.';
+
+  @override
+  String get textSubscriptionAutoRenewApple =>
+      'Automatic renewal, cancel anytime.\nManage your subscription in your Apple ID account settings.';
+
+  @override
+  String get textSubscriptionTerms => 'Subscription Description';
+
+  @override
+  String get textGooglePlayProductUnavailable =>
+      'In-app purchases are not available on this device. Estimated prices may be shown.';
 }

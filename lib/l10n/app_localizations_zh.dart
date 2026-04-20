@@ -484,4 +484,18 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get toastProfessionSetSuccess => '职业设置成功。';
+
+  @override
+  String get textSubscriptionAutoRenewGoogle =>
+      '自动续费，可随时取消。\n可在 Google Play 账户中管理订阅。';
+
+  @override
+  String get textSubscriptionAutoRenewApple =>
+      '自动续费，可随时取消。\n可在 Apple ID 账户设置中管理订阅。';
+
+  @override
+  String get textSubscriptionTerms => '订阅条款';
+
+  @override
+  String get textGooglePlayProductUnavailable => '当前设备无法使用应用内购买，将尝试显示参考价格。';
 }
