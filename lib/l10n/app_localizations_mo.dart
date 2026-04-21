@@ -4,9 +4,9 @@ import 'app_localizations.dart';
 
 // ignore_for_file: type=lint
 
-/// The translations for Traditional Mongolian (`mo`).
-class AppLocalizationsMo extends AppLocalizations {
-  AppLocalizationsMo([String locale = 'mo']) : super(locale);
+/// The translations for Romanian Moldavian Moldovan (`ro`).
+class AppLocalizationsRo extends AppLocalizations {
+  AppLocalizationsRo([String locale = 'ro']) : super(locale);
 
   @override
   String get hintEmail => 'ᠢᠮᠧᠢᠯ ᠬᠠᠶᠢᠭ';
@@ -24,7 +24,7 @@ class AppLocalizationsMo extends AppLocalizations {
   String get hintEmailInvalid => 'ᠵᠥᠪ ᠢᠮᠧᠢᠯ ᠬᠠᠶᠢᠭ ᠣᠷᠣᠭᠤᠯᠤᠭᠠᠷᠠᠢ᠃';
 
   @override
-  String get hintVerificationCode => 'ᠰᠢᠯᠭᠠᠬᠤ ᠳ᠋ᠤᠭᠠᠷ᠎ᠢ ᠣᠷᠣᠭᠤᠯᠤᠭᠠᠷᠠᠢ᠃';
+  String get hintVerificationCode => 'ᠰᠢᠯᠭᠠᠬᠤ ᠳ᠋ᠤᠭᠠᠷ';
 
   @override
   String get hintFeedback => 'ᠠᠰᠠᠭᠤᠳᠠᠯ᠎ᠤᠨ ᠳᠡᠯᠭᠡᠷᠡᠩᠭᠦᠢ ᠠᠭᠤᠯᠭ᠎ᠠ᠎ᠶᠢ ᠣᠷᠣᠭᠤᠯᠤᠭᠠᠷᠠᠢ᠃';
@@ -163,7 +163,7 @@ class AppLocalizationsMo extends AppLocalizations {
 
   @override
   String get textThemeDescription =>
-      'ᠰᠣᠩᠭᠣᠯᠲᠠ᠎ᠶᠢ ᠨᠡᠭᠡᠭᠡᠭᠰᠡᠨ ᠦᠶ᠎ᠡ᠎ᠳ᠋ᠦ᠍ ᠠᠫᠫ᠎ᠨᠢ ᠰᠢᠰᠲ᠋ᠧᠮ᠎ᠦᠨ ᠲᠣᠬᠢᠷᠠᠭᠠᠨ᠎ᠤ᠋ ᠳᠠᠭᠠᠤ ᠬᠠᠷᠠᠭᠳᠠᠬᠤ ᠭᠣᠷᠢᠮ᠎ᠢ᠋ ᠠᠦ᠋ᠲ᠋ᠣᠮᠠᠲ᠎ᠢᠶᠠᠷ ᠰᠣᠩᠭᠣᠨ᠎ᠠ᠃';
+      'ᠰᠣᠩᠭᠣᠯᠲᠠ᠎ᠶᠢ ᠨᠡᠭᠡᠭᠡᠭᠰᠡᠨ ᠦᠶ᠎ᠡ᠎ᠳ᠋ᠦ᠍ ᠠᠫᠫ᠎ᠨᠢ ᠰᠢᠰᠲ᠋ᠧᠮ᠎ᠦᠨ ᠲᠣᠬᠢᠷᠠᠭᠠᠨ᠎ᠤ ᠳᠠᠭᠠᠤ ᠬᠠᠷᠠᠭᠳᠠᠬᠤ ᠭᠣᠷᠢᠮ᠎ᠢ᠋ ᠠᠦ᠋ᠲ᠋ᠣᠮᠠᠲ᠎ᠢᠶᠠᠷ ᠰᠣᠩᠭᠣᠨ᠎ᠠ᠃';
 
   @override
   String get textThemeDark => 'ᠬᠠᠷᠠᠩᠭᠤᠢ ᠥᠩᠭᠡ';
@@ -251,7 +251,7 @@ class AppLocalizationsMo extends AppLocalizations {
 
   @override
   String get textAgreementDialogContent =>
-      'ᠮᠠᠨ᠎ᠤ᠋ ᠠᠫᠫ᠎ᠢ᠋ ᠠᠰᠢᠭᠯᠠᠬᠤ᠎ᠶᠢᠨ ᠲᠤᠯᠠ᠂ ᠬᠡᠷᠡᠭᠯᠡᠭᠴᠢ᠎ᠶᠢᠨ ᠭᠡᠷ᠎ᠡ ᠪᠣᠯᠤᠨ ᠨᠢᠭᠤᠴᠠᠯᠠᠯ᠎ᠤᠨ ᠪᠣᠳᠣᠯᠭ᠎ᠠ᠎ᠶᠢ ᠤᠩᠰᠢᠭᠠᠳ ᠵᠥᠪᠰᠢᠶᠡᠷᠡᠭᠡᠷᠡᠢ᠃ 《ᠵᠥᠪᠰᠢᠶᠡᠷᠡᠬᠦ》 ᠳᠠᠷᠤᠪᠴᠢ ᠳᠡᠭᠡᠷ᠎ᠡ ᠳᠠᠷᠤᠪᠠᠯ ᠲᠠ ᠮᠠᠨ᠎ᠤ᠋ ᠨᠥᠬᠥᠴᠡᠯ᠎ᠢ᠋ ᠵᠥᠪᠰᠢᠶᠡᠷᠡᠭᠰᠡᠨ᠎ᠳ᠋ᠦ᠍ ᠲᠣᠭᠠᠴᠠᠭᠳᠠᠨ᠎ᠠ᠃ ';
+      'ᠮᠠᠨ᠎ᠤ ᠠᠫᠫ᠎ᠢ᠋ ᠠᠰᠢᠭᠯᠠᠬᠤ᠎ᠶᠢᠨ ᠲᠤᠯᠠ᠂ ᠬᠡᠷᠡᠭᠯᠡᠭᠴᠢ᠎ᠶᠢᠨ ᠭᠡᠷ᠎ᠡ ᠪᠣᠯᠤᠨ ᠨᠢᠭᠤᠴᠠᠯᠠᠯ᠎ᠤᠨ ᠪᠣᠳᠣᠯᠭ᠎ᠠ᠎ᠶᠢ ᠤᠩᠰᠢᠭᠠᠳ ᠵᠥᠪᠰᠢᠶᠡᠷᠡᠭᠡᠷᠡᠢ᠃ 《ᠵᠥᠪᠰᠢᠶᠡᠷᠡᠬᠦ》 ᠳᠠᠷᠤᠪᠴᠢ ᠳᠡᠭᠡᠷ᠎ᠡ ᠳᠠᠷᠤᠪᠠᠯ ᠲᠠ ᠮᠠᠨ᠎ᠤ ᠨᠥᠬᠥᠴᠡᠯ᠎ᠢ᠋ ᠵᠥᠪᠰᠢᠶᠡᠷᠡᠭᠰᠡᠨ᠎ᠳ᠋ᠦ᠍ ᠲᠣᠭᠠᠴᠠᠭᠳᠠᠨ᠎ᠠ᠃';
 
   @override
   String get textFullDocumentOfPrefix => '';
@@ -276,7 +276,7 @@ class AppLocalizationsMo extends AppLocalizations {
   String get textUserName => 'ᠬᠡᠷᠡᠭᠯᠡᠭᠴᠢ᠎ᠶᠢᠨ ᠨᠡᠷ᠎ᠡ';
 
   @override
-  String get textMobile => 'ᠤᠲᠠᠰᠤᠨ᠎ᠤ᠋᠎ᠳ᠋ᠤᠭᠠᠷ';
+  String get textMobile => 'ᠤᠲᠠᠰᠤᠨ᠎ᠤ᠎ᠳ᠋ᠤᠭᠠᠷ';
 
   @override
   String get textWechat => 'Wechat';
@@ -331,14 +331,14 @@ class AppLocalizationsMo extends AppLocalizations {
 
   @override
   String get alertAccountDeletionMsg =>
-      'ᠲᠠ ᠦᠨᠡᠬᠡᠷ ᠳ᠋ᠤᠭᠠᠷ᠎᠎ᠢᠶᠠᠨ ᠤᠰᠠᠳᠬᠠᠬᠤ ᠭᠡᠵᠦ ᠪᠠᠢᠨ᠎ᠠ᠎ᠤᠤ？ ᠤᠰᠠᠳᠬᠠᠭᠰᠠᠨ᠎ᠤ᠋ ᠳᠠᠷᠠᠭ᠎ᠠ ᠲᠠᠨ᠎ᠤ᠋ ᠳ᠋ᠤᠭᠠᠷ᠎ᠢ᠋ ᠰᠡᠷᠭᠦᠭᠡᠬᠦ ᠪᠣᠯᠤᠮᠵᠢ᠎ᠦᠭᠡᠢ ᠪᠥᠭᠡᠳ ᠬᠣᠯᠪᠣᠭᠳᠠᠬᠤ ᠪᠦᠬᠦ ᠳ᠋ᠠᠢᠲ᠋ᠠ (ᠣᠷᠴᠢᠭᠤᠯᠭ᠎ᠠ᠎ᠶᠢᠨ ᠲᠡᠦᠬᠡ᠂ ᠠᠪᠳᠠᠷᠠᠯᠠᠭᠰᠠᠨ ᠵᠦᠢᠯᠡᠰ᠂ ᠭᠡᠰᠢᠭᠦᠨ᠎ᠦ ᠡᠷᠬᠡ ᠭᠡᠬᠦ ᠮᠡᠲᠦ) ᠪᠦᠷᠢᠮᠦᠰᠦᠨ ᠤᠰᠠᠳᠬᠤ ᠪᠣᠯᠤᠨ᠎ᠠ᠃';
+      'ᠲᠠ ᠦᠨᠡᠬᠡᠷ ᠳ᠋ᠤᠭᠠᠷ᠎ᠢᠶᠠᠨ ᠤᠰᠠᠳᠬᠠᠬᠤ ᠭᠡᠵᠦ ᠪᠠᠢᠨ᠎ᠠ᠎ᠤᠤ？ ᠤᠰᠠᠳᠬᠠᠭᠰᠠᠨ᠎ᠤ ᠳᠠᠷᠠᠭ᠎ᠠ ᠲᠠᠨ᠎ᠤ ᠳ᠋ᠤᠭᠠᠷ᠎ᠢ᠋ ᠰᠡᠷᠭᠦᠭᠡᠬᠦ ᠪᠣᠯᠤᠮᠵᠢ᠎ᠦᠭᠡᠢ ᠪᠥᠭᠡᠳ ᠬᠣᠯᠪᠣᠭᠳᠠᠬᠤ ᠪᠦᠬᠦ ᠳ᠋ᠠᠢᠲ᠋ᠠ (ᠣᠷᠴᠢᠭᠤᠯᠭ᠎ᠠ᠎ᠶᠢᠨ ᠲᠡᠦᠬᠡ᠂ ᠠᠪᠳᠠᠷᠠᠯᠠᠭᠰᠠᠨ ᠵᠦᠢᠯᠡᠰ᠂ ᠭᠡᠰᠢᠭᠦᠨ᠎ᠦ ᠡᠷᠬᠡ ᠭᠡᠬᠦ ᠮᠡᠲᠦ) ᠪᠦᠷᠢᠮᠦᠰᠦᠨ ᠤᠰᠠᠳᠬᠤ ᠪᠣᠯᠤᠨ᠎ᠠ᠃';
 
   @override
   String get alertLogoutTitle => 'ᠭᠠᠷᠬᠤ';
 
   @override
   String get alertLogoutMsg =>
-      'ᠲᠠ ᠦᠨᠡᠬᠡᠷ ᠭᠠᠷᠬᠤ ᠭᠡᠵᠦ ᠪᠠᠢᠨ᠎ᠠ᠎ᠤᠤ？ ᠭᠠᠷᠤᠭᠰᠠᠨ᠎ᠤ᠋ ᠳᠠᠷᠠᠭ᠎ᠠ ᠲᠠ ᠢᠮᠧᠢᠯ ᠪᠣᠯᠤᠨ ᠨᠢᠭᠤᠴᠠ ᠦᠭᠡ᠎ᠪᠡᠨ ᠠᠰᠢᠭᠯᠠᠨ ᠳᠠᠬᠢᠨ ᠨᠠᠪᠲᠠᠷᠠᠴᠦ ᠪᠣᠯᠤᠨ᠎ᠠ᠃';
+      'ᠲᠠ ᠦᠨᠡᠬᠡᠷ ᠭᠠᠷᠬᠤ ᠭᠡᠵᠦ ᠪᠠᠢᠨ᠎ᠠ᠎ᠤᠤ？ ᠭᠠᠷᠤᠭᠰᠠᠨ᠎ᠤ ᠳᠠᠷᠠᠭ᠎ᠠ ᠲᠠ ᠢᠮᠧᠢᠯ ᠪᠣᠯᠤᠨ ᠨᠢᠭᠤᠴᠠ ᠦᠭᠡ᠎ᠪᠡᠨ ᠠᠰᠢᠭᠯᠠᠨ ᠳᠠᠬᠢᠨ ᠨᠠᠪᠲᠠᠷᠠᠴᠦ ᠪᠣᠯᠤᠨ᠎ᠠ᠃';
 
   @override
   String get alertInsufficientFreeAmountTitle =>
@@ -349,14 +349,14 @@ class AppLocalizationsMo extends AppLocalizations {
       'ᠲᠥᠯᠥᠪᠦᠷᠢ᠎ᠦᠭᠡᠢ ᠣᠷᠴᠢᠭᠤᠯᠬᠤ ᠦᠰᠦᠭ᠎ᠦᠨ ᠲᠣᠭ᠎ᠠ ᠳᠠᠭᠤᠰᠤᠭᠰᠠᠨ ᠪᠠᠢᠨ᠎ᠠ᠃';
 
   @override
-  String get alertEmptyString => 'ᠣᠷᠴᠢᠭᠤᠯᠬᠤ ᠲᠧᠺᠰᠲ᠎᠎ᠢᠶᠡᠨ ᠣᠷᠣᠭᠤᠯᠤᠭᠠᠷᠠᠢ！';
+  String get alertEmptyString => 'ᠣᠷᠴᠢᠭᠤᠯᠬᠤ ᠲᠧᠺᠰᠲ᠎ᠢᠶᠡᠨ ᠣᠷᠣᠭᠤᠯᠤᠭᠠᠷᠠᠢ！';
 
   @override
   String get alertLoginExpireTitle => 'ᠳᠠᠬᠢᠨ ᠨᠡᠪᠲᠡᠷᠡᠬᠦ';
 
   @override
   String get alertLoginExpireMsg =>
-      'ᠲᠠᠨ᠎ᠤ᠋ ᠨᠡᠪᠲᠡᠷᠡᠬᠦ ᠬᠤᠭᠤᠴᠠᠭ᠎ᠠ ᠳᠠᠭᠤᠰᠤᠭᠰᠠᠨ ᠪᠠᠢᠨ᠎ᠠ᠃ ᠳᠠᠬᠢᠨ ᠨᠡᠪᠲᠡᠷᠡᠭᠡᠷᠡᠢ᠃';
+      'ᠲᠠᠨ᠎ᠤ ᠨᠡᠪᠲᠡᠷᠡᠬᠦ ᠬᠤᠭᠤᠴᠠᠭ᠎ᠠ ᠳᠠᠭᠤᠰᠤᠭᠰᠠᠨ ᠪᠠᠢᠨ᠎ᠠ᠃ ᠳᠠᠬᠢᠨ ᠨᠡᠪᠲᠡᠷᠡᠭᠡᠷᠡᠢ᠃';
 
   @override
   String get alertLoginTitle => 'ᠨᠡᠪᠲᠡᠷᠡᠬᠦ ᠪᠤᠶᠤ ᠳᠠᠩᠰᠠᠯᠠᠭᠤᠯᠤᠭᠠᠷᠠᠢ';
@@ -381,7 +381,7 @@ class AppLocalizationsMo extends AppLocalizations {
 
   @override
   String get alertCheckAgreement =>
-      'Abiya Translator ᠎ᠢ ᠠᠰᠢᠭᠯᠠᠵᠤ ᠡᠬᠢᠯᠡᠬᠦ᠎ᠡᠴᠡ᠎ᠪᠡᠨ ᠡᠮᠦᠨ᠎ᠡ ᠮᠠᠨ᠎ᠤ᠋ ᠬᠡᠷᠡᠭᠯᠡᠭᠴᠢ᠎ᠶᠢᠨ ᠭᠡᠷ᠎ᠡ ᠪᠣᠯᠤᠨ ᠨᠢᠭᠤᠴᠠᠯᠠᠯ᠎ᠤᠨ ᠪᠣᠳᠣᠯᠭ᠎ᠠ᠎ᠶᠢ ᠵᠥᠪᠰᠢᠶᠡᠷᠡᠭᠡᠷᠡᠢ᠃';
+      'Abiya Translator ᠎ᠢ ᠠᠰᠢᠭᠯᠠᠵᠤ ᠡᠬᠢᠯᠡᠬᠦ᠎ᠡᠴᠡ᠎ᠪᠡᠨ ᠡᠮᠦᠨ᠎ᠡ ᠮᠠᠨ᠎ᠤ ᠬᠡᠷᠡᠭᠯᠡᠭᠴᠢ᠎ᠶᠢᠨ ᠭᠡᠷ᠎ᠡ ᠪᠣᠯᠤᠨ ᠨᠢᠭᠤᠴᠠᠯᠠᠯ᠎ᠤᠨ ᠪᠣᠳᠣᠯᠭ᠎ᠠ᠎ᠶᠢ ᠵᠥᠪᠰᠢᠶᠡᠷᠡᠭᠡᠷᠡᠢ᠃';
 
   @override
   String get alertInputPasswordTitle => 'ᠨᠢᠭᠤᠴᠠ ᠦᠭᠡ᠎ᠪᠡᠨ ᠣᠷᠣᠭᠤᠯᠤᠭᠠᠷᠠᠢ';
@@ -395,7 +395,7 @@ class AppLocalizationsMo extends AppLocalizations {
 
   @override
   String get alertAccountDeleted =>
-      'ᠲᠠᠨ᠎ᠤ᠋ ᠳ᠋ᠤᠭᠠᠷ᠎ᠢ᠋ ᠠᠮᠵᠢᠯᠲᠠᠲᠠᠢ ᠤᠰᠠᠳᠬᠠᠯ᠎ᠠ᠃ Abiya Translator ᠎ᠢ᠋ ᠠᠰᠢᠭᠯᠠᠭᠰᠠᠨ᠎ᠳ᠋ᠤ᠌ ᠴᠢᠨᠢ ᠪᠠᠶᠠᠷᠯᠠᠯ᠎ᠠ᠃';
+      'ᠲᠠᠨ᠎ᠤ ᠳ᠋ᠤᠭᠠᠷ᠎ᠢ᠋ ᠠᠮᠵᠢᠯᠲᠠᠲᠠᠢ ᠤᠰᠠᠳᠬᠠᠯ᠎ᠠ᠃ Abiya Translator ᠎ᠢ᠋ ᠠᠰᠢᠭᠯᠠᠭᠰᠠᠨ᠎ᠳ᠋ᠤ᠌ ᠴᠢᠨᠢ ᠪᠠᠶᠠᠷᠯᠠᠯ᠎ᠠ᠃';
 
   @override
   String get alertTitleCancelRegister => 'ᠳᠠᠩᠰᠠᠯᠠᠭᠤᠯᠬᠤ᠎ᠪᠠᠨ ᠪᠣᠯᠢᠬᠤ';
@@ -433,7 +433,7 @@ class AppLocalizationsMo extends AppLocalizations {
   String get toastAlipayNotInstalled => 'Alipay ᠤᠭᠰᠠᠷᠠᠭᠳᠠᠭ᠎ᠠ᠎ᠦᠭᠡᠢ᠃ ';
 
   @override
-  String get textVersion => 'ᠬᠡᠪ᠄';
+  String get textVersion => 'ᠬᠡᠪ᠄ ';
 
   @override
   String get textCompanyName =>
@@ -488,26 +488,42 @@ class AppLocalizationsMo extends AppLocalizations {
 
   @override
   String get alertMsgMongolianTranslationNotSupported =>
-      'ᠠᠭᠤᠴᠢᠯᠠᠭᠠᠷᠠᠢ᠂ ᠣᠳᠣᠬᠠᠨ᠎ᠳᠤ ᠤᠯᠠᠮᠵᠢᠯᠠᠯᠲᠤ ᠮᠣᠩᠭᠣᠯ ᠬᠡᠯᠡᠨ᠎ᠦ ᠣᠷᠴᠢᠭᠤᠯᠭ᠎ᠠ᠎ᠶᠢ ᠳᠡᠮᠵᠢᠬᠦ᠎ᠦᠭᠡᠢ᠂ ᠪᠢᠳᠡ ᠶᠠᠭ ᠪᠥᠬᠥ ᠬᠦᠴᠦ᠎ᠪᠡᠷ᠎᠎ᠢᠶᠡᠨ ᠰᠤᠳᠤᠯᠠᠨ ᠨᠡᠬᠡᠭᠡᠵᠦ ᠪᠠᠢᠨ᠎ᠠ᠃';
+      'ᠠᠭᠤᠴᠢᠯᠠᠭᠠᠷᠠᠢ᠂ ᠣᠳᠣᠬᠠᠨ᠎ᠳᠤ ᠤᠯᠠᠮᠵᠢᠯᠠᠯᠲᠤ ᠮᠣᠩᠭᠣᠯ ᠬᠡᠯᠡᠨ᠎ᠦ ᠣᠷᠴᠢᠭᠤᠯᠭ᠎ᠠ᠎ᠶᠢ ᠳᠡᠮᠵᠢᠬᠦ᠎ᠦᠭᠡᠢ᠂ ᠪᠢᠳᠡ ᠶᠠᠭ ᠪᠥᠬᠥ ᠬᠦᠴᠦ᠎ᠪᠡᠷ᠎ᠢᠶᠡᠨ ᠰᠤᠳᠤᠯᠠᠨ ᠨᠡᠬᠡᠭᠡᠵᠦ ᠪᠠᠢᠨ᠎ᠠ᠃';
 
   @override
   String get alertMsgJapaneseTranslationNotSupported =>
-      'ᠠᠭᠤᠴᠢᠯᠠᠭᠠᠷᠠᠢ᠂ ᠣᠳᠣᠬᠠᠨ᠎ᠳᠤ ᠶᠠᠫᠣᠨ ᠬᠡᠯᠡᠨ᠎ᠦ ᠣᠷᠴᠢᠭᠤᠯᠭ᠎ᠠ᠎ᠶᠢ ᠳᠡᠮᠵᠢᠬᠦ᠎ᠦᠭᠡᠢ᠂ ᠪᠢᠳᠡ ᠶᠠᠭ ᠪᠥᠬᠥ ᠬᠦᠴᠦ᠎ᠪᠡᠷ᠎᠎ᠢᠶᠡᠨ ᠰᠤᠳᠤᠯᠠᠨ ᠨᠡᠬᠡᠭᠡᠵᠦ ᠪᠠᠢᠨ᠎ᠠ᠃';
+      'ᠠᠭᠤᠴᠢᠯᠠᠭᠠᠷᠠᠢ᠂ ᠣᠳᠣᠬᠠᠨ᠎ᠳᠤ ᠶᠠᠫᠣᠨ ᠬᠡᠯᠡᠨ᠎ᠦ ᠣᠷᠴᠢᠭᠤᠯᠭ᠎ᠠ᠎ᠶᠢ ᠳᠡᠮᠵᠢᠬᠦ᠎ᠦᠭᠡᠢ᠂ ᠪᠢᠳᠡ ᠶᠠᠭ ᠪᠥᠬᠥ ᠬᠦᠴᠦ᠎ᠪᠡᠷ᠎ᠢᠶᠡᠨ ᠰᠤᠳᠤᠯᠠᠨ ᠨᠡᠬᠡᠭᠡᠵᠦ ᠪᠠᠢᠨ᠎ᠠ᠃';
 
   @override
   String get alertMsgMongolianUINotSupported =>
-      'ᠠᠭᠤᠴᠢᠯᠠᠭᠠᠷᠠᠢ᠂ ᠣᠳᠣᠬᠠᠨ᠎ᠳᠤ ᠠᠫᠫ ᠤᠯᠠᠮᠵᠢᠯᠠᠯᠲᠤ ᠮᠣᠩᠭᠣᠯ ᠬᠡᠯᠡ᠎ᠶᠢ ᠳᠡᠮᠵᠢᠬᠦ᠎ᠦᠭᠡᠢ᠂ ᠪᠢᠳᠡ ᠶᠠᠭ ᠪᠥᠬᠥ ᠬᠦᠴᠦ᠎ᠪᠡᠷ᠎᠎ᠢᠶᠡᠨ ᠰᠤᠳᠤᠯᠠᠨ ᠨᠡᠬᠡᠭᠡᠵᠦ ᠪᠠᠢᠨ᠎ᠠ᠃';
+      'ᠠᠭᠤᠴᠢᠯᠠᠭᠠᠷᠠᠢ᠂ ᠣᠳᠣᠬᠠᠨ᠎ᠳᠤ ᠠᠫᠫ ᠤᠯᠠᠮᠵᠢᠯᠠᠯᠲᠤ ᠮᠣᠩᠭᠣᠯ ᠬᠡᠯᠡ᠎ᠶᠢ ᠳᠡᠮᠵᠢᠬᠦ᠎ᠦᠭᠡᠢ᠂ ᠪᠢᠳᠡ ᠶᠠᠭ ᠪᠥᠬᠥ ᠬᠦᠴᠦ᠎ᠪᠡᠷ᠎ᠢᠶᠡᠨ ᠰᠤᠳᠤᠯᠠᠨ ᠨᠡᠬᠡᠭᠡᠵᠦ ᠪᠠᠢᠨ᠎ᠠ᠃';
 
   @override
   String get alertModelNotSupported =>
-      'ᠠᠭᠤᠴᠢᠯᠠᠭᠠᠷᠠᠢ᠂ ᠣᠳᠣᠬᠠᠨ᠎ᠳᠤ ᠲᠤᠰ ᠬᠣᠶᠠᠷ ᠬᠡᠯᠡᠨ᠎ᠦ ᠬᠣᠭᠣᠷᠣᠨᠳᠣᠬᠢ ᠣᠷᠴᠢᠭᠤᠯᠭ᠎ᠠ᠎ᠶᠢ ᠳᠡᠮᠵᠢᠬᠦ᠎ᠦᠭᠡᠢ᠂ ᠪᠢᠳᠡ ᠶᠠᠭ ᠪᠥᠬᠥ ᠬᠦᠴᠦ᠎ᠪᠡᠷ᠎᠎ᠢᠶᠡᠨ ᠰᠤᠳᠤᠯᠠᠨ ᠨᠡᠬᠡᠭᠡᠵᠦ ᠪᠠᠢᠨ᠎ᠠ᠃';
+      'ᠠᠭᠤᠴᠢᠯᠠᠭᠠᠷᠠᠢ᠂ ᠣᠳᠣᠬᠠᠨ᠎ᠳᠤ ᠲᠤᠰ ᠬᠣᠶᠠᠷ ᠬᠡᠯᠡᠨ᠎ᠦ ᠬᠣᠭᠣᠷᠣᠨᠳᠣᠬᠢ ᠣᠷᠴᠢᠭᠤᠯᠭ᠎ᠠ᠎ᠶᠢ ᠳᠡᠮᠵᠢᠬᠦ᠎ᠦᠭᠡᠢ᠂ ᠪᠢᠳᠡ ᠶᠠᠭ ᠪᠥᠬᠥ ᠬᠦᠴᠦ᠎ᠪᠡᠷ᠎ᠢᠶᠡᠨ ᠰᠤᠳᠤᠯᠠᠨ ᠨᠡᠬᠡᠭᠡᠵᠦ ᠪᠠᠢᠨ᠎ᠠ᠃';
 
   @override
-  String get textProfessionSelection => 'Ажлын байр';
+  String get textProfessionSelection => 'ᠠᠵᠢᠯ᠎ᠤᠨ ᠪᠠᠢᠷᠢ';
 
   @override
-  String get hintSelectProfession => 'Та ашиглах ажлын байрыг сонгоорой:';
+  String get hintSelectProfession => 'ᠲᠠ ᠠᠰᠢᠭᠯᠠᠬᠤ ᠠᠵᠢᠯ᠎ᠤᠨ ᠪᠠᠢᠷᠢ᠎ᠶᠢ ᠰᠣᠩᠭᠤᠭᠠᠷᠠᠢ:';
 
   @override
-  String get toastProfessionSetSuccess => 'Ажлын байрыг амжилттай тохирууллаа.';
+  String get toastProfessionSetSuccess =>
+      'ᠠᠵᠢᠯ᠎ᠤᠨ ᠪᠠᠢᠷᠢ᠎ᠶᠢ ᠠᠮᠵᠢᠯᠲᠠᠲᠠᠢ ᠲᠣᠬᠢᠷᠠᠭᠤᠯᠤᠯ᠎ᠠ᠃';
+
+  @override
+  String get textSubscriptionAutoRenewGoogle =>
+      'ᠠᠦ᠋ᠲ᠋ᠣᠮᠠᠲ ᠰᠢᠨᠡᠴᠢᠯᠡᠯᠲᠡ᠂ ᠬᠦᠰᠡᠭᠰᠡᠨ ᠦᠶ᠎ᠡ᠎ᠳᠡᠭᠡᠨ ᠦᠭᠡᠢᠰᠭᠡᠵᠦ ᠪᠣᠯᠤᠨ᠎ᠠ᠃\nᠲᠠ ᠵᠠᠬᠢᠶᠠᠯᠠᠭ᠎ᠠ᠎ᠪᠠᠨ Google Play ᠳ᠋ᠤᠭᠠᠷ᠎ᠢᠶᠠᠷ᠎ᠢᠶᠠᠨ ᠬᠠᠮᠢᠶᠠᠷᠬᠤ ᠪᠣᠯᠤᠮᠵᠢ᠎ᠲᠠᠢ᠃';
+
+  @override
+  String get textSubscriptionAutoRenewApple =>
+      'ᠠᠦ᠋ᠲ᠋ᠣᠮᠠᠲ ᠰᠢᠨᠡᠴᠢᠯᠡᠯᠲᠡ᠂ ᠬᠦᠰᠡᠭᠰᠡᠨ ᠦᠶ᠎ᠡ᠎ᠳᠡᠭᠡᠨ ᠦᠭᠡᠢᠰᠭᠡᠵᠦ ᠪᠣᠯᠤᠨ᠎ᠠ᠃\nᠲᠠ ᠵᠠᠬᠢᠶᠠᠯᠠᠭ᠎ᠠ᠎ᠪᠠᠨ Apple ID ᠳᠠᠩᠰᠠᠨ᠎ᠤ ᠲᠣᠬᠢᠷᠠᠭ᠎ᠠ᠎ᠪᠠᠷ ᠬᠠᠮᠢᠶᠠᠷᠬᠤ ᠪᠣᠯᠤᠮᠵᠢ᠎ᠲᠠᠢ᠃';
+
+  @override
+  String get textSubscriptionTerms => 'ᠵᠠᠬᠢᠶᠠᠯᠠᠭ᠎ᠠ᠎ᠶᠢᠨ ᠲᠠᠢᠯᠪᠤᠷᠢ';
+
+  @override
+  String get textGooglePlayProductUnavailable =>
+      'In-app purchases are not available on this device. Estimated prices may be shown.';
 }

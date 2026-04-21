@@ -521,7 +521,7 @@ class AppLocalizationsRo extends AppLocalizations {
       'ᠠᠦ᠋ᠲ᠋ᠣᠮᠠᠲ ᠰᠢᠨᠡᠴᠢᠯᠡᠯᠲᠡ᠂ ᠬᠦᠰᠡᠭᠰᠡᠨ ᠦᠶ᠎ᠡ᠎ᠳᠡᠭᠡᠨ ᠦᠭᠡᠢᠰᠭᠡᠵᠦ ᠪᠣᠯᠤᠨ᠎ᠠ᠃\nᠲᠠ ᠵᠠᠬᠢᠶᠠᠯᠠᠭ᠎ᠠ᠎ᠪᠠᠨ Apple ID ᠳᠠᠩᠰᠠᠨ᠎ᠤ ᠲᠣᠬᠢᠷᠠᠭ᠎ᠠ᠎ᠪᠠᠷ ᠬᠠᠮᠢᠶᠠᠷᠬᠤ ᠪᠣᠯᠤᠮᠵᠢ᠎ᠲᠠᠢ᠃';
 
   @override
-  String get textSubscriptionTerms => 'ᠵᠠᠬᠢᠶᠠᠯᠭ᠎ᠠ ᠶᠢᠨ ᠲᠠᠢᠯᠪᠤᠷ';
+  String get textSubscriptionTerms => 'ᠵᠵᠠᠬᠢᠶᠠᠯᠠᠭ᠎ᠠ᠎ᠶᠢᠨ ᠲᠠᠢᠯᠪᠤᠷᠢ';
 
   @override
   String get textGooglePlayProductUnavailable =>

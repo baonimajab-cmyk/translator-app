@@ -8,7 +8,7 @@ import 'package:intl/intl.dart' as intl;
 import 'app_localizations_en.dart';
 import 'app_localizations_ja.dart';
 import 'app_localizations_mn.dart';
-import 'app_localizations_ro.dart';
+import 'app_localizations_mo.dart';
 import 'app_localizations_zh.dart';
 
 // ignore_for_file: type=lint

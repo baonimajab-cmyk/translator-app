@@ -619,7 +619,7 @@ class MembershipPageState extends State<MembershipPage> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 MongolText(titleText, style: titleStyleMo),
-                const SizedBox(width: 5),
+                const SizedBox(width: 20),
                 MongolText(bodyText, style: bodyStyleMo),
               ],
             )
@@ -630,7 +630,7 @@ class MembershipPageState extends State<MembershipPage> {
                   alignment: Alignment.center,
                   child: Text(titleText, style: titleStyleH),
                 ),
-                const SizedBox(height: 5),
+                const SizedBox(height: 20),
                 Text(bodyText, style: bodyStyleH),
               ],
             ),
@@ -836,11 +836,11 @@ class MembershipPageState extends State<MembershipPage> {
                                   });
                                 }),
                             const SizedBox(
-                              height: 5,
+                              height: 20,
                             ),
                             _buildSubscriptionNotice(context),
                             const SizedBox(
-                              height: 5,
+                              height: 20,
                             ),
                             const MembershipRightsView(),
                             AdaptiveListView(
