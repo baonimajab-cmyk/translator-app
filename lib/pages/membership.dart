@@ -619,7 +619,7 @@ class MembershipPageState extends State<MembershipPage> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 MongolText(titleText, style: titleStyleMo),
-                const SizedBox(width: 20),
+                const SizedBox(width: 5),
                 MongolText(bodyText, style: bodyStyleMo),
               ],
             )
@@ -687,6 +687,7 @@ class MembershipPageState extends State<MembershipPage> {
                               }),
                           const SizedBox(width: 20),
                           _buildSubscriptionNotice(context),
+                          const SizedBox(width: 20),
                           const MembershipRightsView(),
                           AdaptiveListView(children: [
                             ListGroup(dividerMargin: 48, children: [
