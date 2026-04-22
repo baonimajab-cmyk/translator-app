@@ -390,7 +390,7 @@ class MembershipPageState extends State<MembershipPage> {
     if (!mounted) {
       return;
     }
-    if (!isAvailable) {
+    if (!isAvailable && PlatformConfig.current != AppPlatform.china) {
       Logger.log("IAP not available");
       // toast 提示 用户支付环境不支持
       ToastHelper.show(
@@ -671,7 +671,7 @@ class MembershipPageState extends State<MembershipPage> {
                   child: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Padding(
-                      padding: const EdgeInsets.only(left: 0.0),
+                      padding: const EdgeInsets.only(left: 20.0),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
@@ -687,7 +687,9 @@ class MembershipPageState extends State<MembershipPage> {
                               }),
                           const SizedBox(width: 20),
                           _buildSubscriptionNotice(context),
-                          const SizedBox(width: 20),
+                          PlatformConfig.current == AppPlatform.china
+                              ? const SizedBox.shrink()
+                              : const SizedBox(width: 20),
                           const MembershipRightsView(),
                           AdaptiveListView(children: [
                             ListGroup(dividerMargin: 48, children: [
@@ -840,9 +842,9 @@ class MembershipPageState extends State<MembershipPage> {
                               height: 20,
                             ),
                             _buildSubscriptionNotice(context),
-                            const SizedBox(
-                              height: 20,
-                            ),
+                            PlatformConfig.current == AppPlatform.china
+                                ? const SizedBox.shrink()
+                                : const SizedBox(height: 20),
                             const MembershipRightsView(),
                             AdaptiveListView(
                               children: [

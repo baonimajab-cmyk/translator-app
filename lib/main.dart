@@ -24,6 +24,10 @@ void main() async {
     SystemUiMode.manual,
     overlays: [SystemUiOverlay.bottom, SystemUiOverlay.top],
   );
+  // 全应用锁定竖屏（关闭横屏）
+  await SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+  ]);
   GetIt.I.registerSingleton<UserManager>(UserManager());
   GetIt.I.registerSingleton<LanguageSetting>(LanguageSetting());
   GetIt.I.registerSingleton<SystemSetting>(SystemSetting());
@@ -60,8 +64,8 @@ class MyAppState extends State<MyApp> {
                 return Theme(
                   data: Theme.of(context).copyWith(
                     appBarTheme: Theme.of(context).appBarTheme.copyWith(
-                      shape: UiHelper.appBarBottomBorder(context),
-                    ),
+                          shape: UiHelper.appBarBottomBorder(context),
+                        ),
                   ),
                   child: child ?? const SizedBox.shrink(),
                 );
