@@ -1069,6 +1069,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'In-app purchases are not available on this device. Estimated prices may be shown.'**
   String get textGooglePlayProductUnavailable;
+
+  /// No description provided for @textLabelTransactionId.
+  ///
+  /// In en, this message translates to:
+  /// **'Transaction ID: '**
+  String get textLabelTransactionId;
+
+  /// No description provided for @textLabelPaymentMethod.
+  ///
+  /// In en, this message translates to:
+  /// **'Payment Method: '**
+  String get textLabelPaymentMethod;
+
+  /// No description provided for @textLabelTransactionTime.
+  ///
+  /// In en, this message translates to:
+  /// **'Transaction Time: '**
+  String get textLabelTransactionTime;
 }
 
 class _AppLocalizationsDelegate

@@ -526,4 +526,13 @@ class AppLocalizationsRo extends AppLocalizations {
   @override
   String get textGooglePlayProductUnavailable =>
       'In-app purchases are not available on this device. Estimated prices may be shown.';
+
+  @override
+  String get textLabelTransactionId => 'ᠭᠦᠢᠯᠭᠡᠭᠡᠨ᠎ᠦ ᠳ᠋ᠤᠭᠠᠷ᠄';
+
+  @override
+  String get textLabelPaymentMethod => 'ᠲᠥᠯᠥᠪᠦᠷᠢ᠎ᠶᠢᠨ ᠠᠷᠭ᠎ᠠ᠄';
+
+  @override
+  String get textLabelTransactionTime => 'ᠭᠦᠢᠯᠭᠡᠭᠡᠨ᠎ᠦ ᠴᠠᠭ᠄';
 }

@@ -524,4 +524,13 @@ class AppLocalizationsMn extends AppLocalizations {
   @override
   String get textGooglePlayProductUnavailable =>
       'Энэ төхөөрөмж дээр апп доторх худалдан авалт боломжгүй. Урьдчилсан үнэ харуулж болно.';
+
+  @override
+  String get textLabelTransactionId => 'Гүйлгээний дугаар: ';
+
+  @override
+  String get textLabelPaymentMethod => 'Төлбөрийн арга: ';
+
+  @override
+  String get textLabelTransactionTime => 'Гүйлгээний цаг: ';
 }

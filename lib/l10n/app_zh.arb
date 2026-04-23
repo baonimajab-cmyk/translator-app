@@ -159,5 +159,8 @@
     "textSubscriptionAutoRenewGoogle": "自动续费，可随时取消。\n可在 Google Play 账户中管理订阅。",
     "textSubscriptionAutoRenewApple": "自动续费，可随时取消。\n可在 Apple ID 账户设置中管理订阅。",
     "textSubscriptionTerms": "订阅条款",
-    "textGooglePlayProductUnavailable": "当前设备无法使用应用内购买，将尝试显示参考价格。"
+    "textGooglePlayProductUnavailable": "当前设备无法使用应用内购买，将尝试显示参考价格。",
+    "textLabelTransactionId": "交易编号：",
+    "textLabelPaymentMethod": "支付方式：",
+    "textLabelTransactionTime": "交易时间："
 }

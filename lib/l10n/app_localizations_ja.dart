@@ -508,4 +508,13 @@ class AppLocalizationsJa extends AppLocalizations {
   @override
   String get textGooglePlayProductUnavailable =>
       'このデバイスではアプリ内課金をご利用いただけません。参考価格を表示する場合があります。';
+
+  @override
+  String get textLabelTransactionId => '取引ID：';
+
+  @override
+  String get textLabelPaymentMethod => '支払い方法：';
+
+  @override
+  String get textLabelTransactionTime => '取引時間：';
 }

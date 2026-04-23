@@ -85,6 +85,9 @@ class UserInfo {
   int profession;
   int membershipExpireDate;
   String tags;
+
+  /// 服务端 `POST /app/membership_plan` 返回的 `plan`：monthly / quarterly / yearly / unknown
+  String? membershipPlan;
   UserInfo(
       {required this.uuid,
       required this.name,
@@ -95,7 +98,8 @@ class UserInfo {
       required this.language,
       required this.profession,
       required this.membershipExpireDate,
-      required this.tags});
+      required this.tags,
+      this.membershipPlan});
   factory UserInfo.fromJson(Map<String, dynamic> json) {
     return UserInfo(
         uuid: json['uuid'],
@@ -107,7 +111,8 @@ class UserInfo {
         language: json['language'] ?? 0,
         profession: json['profession'] ?? 0,
         membershipExpireDate: json['expire_date'] ?? 0,
-        tags: json['tags'] ?? '');
+        tags: json['tags'] ?? '',
+        membershipPlan: json['plan'] as String?);
   }
 
   Map<String, dynamic> toJson() {
@@ -121,7 +126,8 @@ class UserInfo {
       "language": language,
       "profession": profession,
       "expire_date": membershipExpireDate,
-      "tags": tags
+      "tags": tags,
+      if (membershipPlan != null) "plan": membershipPlan,
     };
   }
 
@@ -129,5 +135,22 @@ class UserInfo {
     var now = DateTime.now().millisecondsSinceEpoch;
     bool isMember = membershipExpireDate > now;
     return isMember;
+  }
+}
+
+/// 会员名后角标：非会员为灰色；在会与员依据 [UserInfo.membershipPlan]。
+String membershipBadgeAsset(UserInfo user) {
+  if (!user.isMember()) {
+    return 'assets/images/icon_membership_inactive_small.png';
+  }
+  switch (user.membershipPlan) {
+    case 'monthly':
+      return 'assets/images/icon_membership_month.png';
+    case 'quarterly':
+      return 'assets/images/icon_membership_season.png';
+    case 'yearly':
+      return 'assets/images/icon_membership_year.png';
+    default:
+      return 'assets/images/icon_membership_month.png';
   }
 }

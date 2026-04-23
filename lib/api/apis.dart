@@ -39,3 +39,4 @@ const String apiStartAlipayTransaction = '/app/start_alipay_transaction';
 const String apiVerifyAlipayTransaction = '/app/verify_alipay_purchase';
 const String apiGetProfessionList = '/app/get_professions';
 const String apiSetUserProfession = '/app/set_profession';
+const String apiMembershipPlan = '/app/membership_plan';

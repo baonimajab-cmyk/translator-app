@@ -16,6 +16,7 @@ import 'package:abiya_translator/utils/logger.dart';
 import 'package:abiya_translator/utils/pay/alipay_helper.dart';
 import 'package:abiya_translator/utils/pay/wechat_pay_helper.dart';
 import 'package:abiya_translator/utils/system_setting.dart';
+import 'package:abiya_translator/utils/membership_plan_sync.dart';
 import 'package:abiya_translator/utils/toast_helper.dart';
 import 'package:abiya_translator/utils/ui_helper.dart';
 import 'package:abiya_translator/widgets/alert_dialog.dart';
@@ -82,6 +83,9 @@ class MembershipPageState extends State<MembershipPage> {
         getSubscriptionItems();
       }
     }
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      syncMembershipPlanFromServer(userManager);
+    });
   }
 
   // void onAlipayPayResponse(AlipayResp resp) {
@@ -317,11 +321,13 @@ class MembershipPageState extends State<MembershipPage> {
     if (info != null) {
       info.membershipExpireDate = response.expirationTime;
       userManager.saveUser(info);
+      syncMembershipPlanFromServer(userManager);
       userManager.setLastTransactionUuid(info.uuid);
       userManager.setLastTransactionId(response.transactionId);
     } else {
       if (response.userInfo != null) {
         userManager.saveUser(response.userInfo!);
+        syncMembershipPlanFromServer(userManager);
         userManager.setLastTransactionUuid(response.userInfo!.uuid);
         userManager.setLastTransactionId(response.transactionId);
       }
@@ -1819,25 +1825,27 @@ class UserBanner extends StatelessWidget {
             children: [
               Column(
                 children: [
-                  MongolText(
-                      userInfo == null
-                          ? AppLocalizations.of(context)!.textLoginPlaceholder
-                          : userInfo!.name,
-                      style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'NotoSans',
-                          color: Theme.of(context).colorScheme.onSurface)),
+                  Padding(
+                      padding: EdgeInsets.only(left: 6),
+                      child: MongolText(
+                        userInfo == null
+                            ? AppLocalizations.of(context)!.textLoginPlaceholder
+                            : userInfo!.name,
+                        style: TextStyle(
+                            fontSize: 16,
+                            color: Theme.of(context).colorScheme.onSurface,
+                            fontFamily: 'NotoSans',
+                            fontWeight: FontWeight.bold),
+                      )),
                   const SizedBox(
                     height: 4,
                   ),
-                  userInfo == null || !userInfo!.isMember()
+                  userInfo == null
                       ? Container()
                       : SizedBox(
                           width: 18,
                           height: 18,
-                          child: Image.asset(
-                              'assets/images/icon_membership_active_small.png'),
+                          child: Image.asset(membershipBadgeAsset(userInfo!)),
                         )
                 ],
               ),
@@ -1905,13 +1913,12 @@ class UserBanner extends StatelessWidget {
                     const SizedBox(
                       width: 8,
                     ),
-                    userInfo == null || !userInfo!.isMember()
+                    userInfo == null
                         ? Container()
                         : SizedBox(
                             width: 18,
                             height: 18,
-                            child: Image.asset(
-                                'assets/images/icon_membership_active_small.png'),
+                            child: Image.asset(membershipBadgeAsset(userInfo!)),
                           )
                   ],
                 ),

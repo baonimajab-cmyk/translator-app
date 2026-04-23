@@ -65,6 +65,19 @@ class LoginRegisterResponse extends CommonReponse {
   }
 }
 
+class MembershipPlanResponse extends CommonReponse {
+  late bool isMember;
+  String? plan;
+  int? membershipMonths;
+  late int expireDate;
+  MembershipPlanResponse(super.json) {
+    isMember = data['is_member'] == true;
+    plan = data['plan'] as String?;
+    membershipMonths = (data['membership_months'] as num?)?.toInt();
+    expireDate = (data['expire_date'] as num?)?.toInt() ?? 0;
+  }
+}
+
 class TranslationListResponse extends CommonReponse {
   List<TranslationItem> list = [];
   bool more = false;
@@ -255,6 +268,7 @@ class TransactionListResponse extends CommonReponse {
         payment: getPaymentName(item['payment']),
         time: item['time'],
         product: item['product'],
+        projectId: item['project_id'],
         currency: item['currency'],
       ));
     });
@@ -279,6 +293,7 @@ class TransactionItem {
   final int time;
   final String product;
   final String currency;
+  final int? projectId;
 
   TransactionItem({
     required this.id,
@@ -287,6 +302,7 @@ class TransactionItem {
     required this.time,
     required this.product,
     required this.currency,
+    this.projectId,
   });
 }
 

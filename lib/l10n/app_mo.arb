@@ -159,5 +159,8 @@
     "textSubscriptionAutoRenewGoogle": "ᠠᠦ᠋ᠲ᠋ᠣᠮᠠᠲ ᠰᠢᠨᠡᠴᠢᠯᠡᠯᠲᠡ᠂ ᠬᠦᠰᠡᠭᠰᠡᠨ ᠦᠶ᠎ᠡ᠎ᠳᠡᠭᠡᠨ ᠦᠭᠡᠢᠰᠭᠡᠵᠦ ᠪᠣᠯᠤᠨ᠎ᠠ᠃\nᠲᠠ ᠵᠠᠬᠢᠶᠠᠯᠠᠭ᠎ᠠ᠎ᠪᠠᠨ Google Play ᠳ᠋ᠤᠭᠠᠷ᠎ᠢᠶᠠᠷ᠎ᠢᠶᠠᠨ ᠬᠠᠮᠢᠶᠠᠷᠬᠤ ᠪᠣᠯᠤᠮᠵᠢ᠎ᠲᠠᠢ᠃",
     "textSubscriptionAutoRenewApple": "ᠠᠦ᠋ᠲ᠋ᠣᠮᠠᠲ ᠰᠢᠨᠡᠴᠢᠯᠡᠯᠲᠡ᠂ ᠬᠦᠰᠡᠭᠰᠡᠨ ᠦᠶ᠎ᠡ᠎ᠳᠡᠭᠡᠨ ᠦᠭᠡᠢᠰᠭᠡᠵᠦ ᠪᠣᠯᠤᠨ᠎ᠠ᠃\nᠲᠠ ᠵᠠᠬᠢᠶᠠᠯᠠᠭ᠎ᠠ᠎ᠪᠠᠨ Apple ID ᠳᠠᠩᠰᠠᠨ᠎ᠤ ᠲᠣᠬᠢᠷᠠᠭ᠎ᠠ᠎ᠪᠠᠷ ᠬᠠᠮᠢᠶᠠᠷᠬᠤ ᠪᠣᠯᠤᠮᠵᠢ᠎ᠲᠠᠢ᠃",
     "textSubscriptionTerms": "ᠵᠠᠬᠢᠶᠠᠯᠠᠭ᠎ᠠ᠎ᠶᠢᠨ ᠲᠠᠢᠯᠪᠤᠷᠢ",
-    "textGooglePlayProductUnavailable": "In-app purchases are not available on this device. Estimated prices may be shown."
+    "textGooglePlayProductUnavailable": "In-app purchases are not available on this device. Estimated prices may be shown.",
+    "textLabelTransactionId": "ᠭᠦᠢᠯᠭᠡᠭᠡᠨ᠎ᠦ ᠳ᠋ᠤᠭᠠᠷ᠄",
+    "textLabelPaymentMethod": "ᠲᠥᠯᠥᠪᠦᠷᠢ᠎ᠶᠢᠨ ᠠᠷᠭ᠎ᠠ᠄",
+    "textLabelTransactionTime": "ᠭᠦᠢᠯᠭᠡᠭᠡᠨ᠎ᠦ ᠴᠠᠭ᠄"
 }

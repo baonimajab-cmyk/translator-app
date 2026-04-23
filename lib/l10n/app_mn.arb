@@ -159,5 +159,8 @@
     "textSubscriptionAutoRenewGoogle": "Автомат шинэчлэлт, хүссэн үедээ цуцалж болно.\nТа захиалгаа Google Play дугаараараа хамаарах боломжтой.",
     "textSubscriptionAutoRenewApple": "Автомат шинэчлэлт, хүссэн үедээ цуцалж болно.\nТа захиалгаа Apple ID дансны тохиргоогоор хамаарах боломжтой.",
     "textSubscriptionTerms": "Захиалгын тайлбар",
-    "textGooglePlayProductUnavailable": "Энэ төхөөрөмж дээр апп доторх худалдан авалт боломжгүй. Урьдчилсан үнэ харуулж болно."
+    "textGooglePlayProductUnavailable": "Энэ төхөөрөмж дээр апп доторх худалдан авалт боломжгүй. Урьдчилсан үнэ харуулж болно.",
+    "textLabelTransactionId": "Гүйлгээний дугаар: ",
+    "textLabelPaymentMethod": "Төлбөрийн арга: ",
+    "textLabelTransactionTime": "Гүйлгээний цаг: "
 }

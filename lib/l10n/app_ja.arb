@@ -159,5 +159,8 @@
     "textSubscriptionAutoRenewGoogle": "自動更新、いつでも解約可能。\nGoogle Play アカウントでサブスクリプションを管理できます。",
     "textSubscriptionAutoRenewApple": "自動更新、いつでも解約可能。\nApple ID のアカウント設定でサブスクリプションを管理できます。",
     "textSubscriptionTerms": "サブスクリプションの説明",
-    "textGooglePlayProductUnavailable": "このデバイスではアプリ内課金をご利用いただけません。参考価格を表示する場合があります。"
+    "textGooglePlayProductUnavailable": "このデバイスではアプリ内課金をご利用いただけません。参考価格を表示する場合があります。",
+    "textLabelTransactionId": "取引ID：",
+    "textLabelPaymentMethod": "支払い方法：",
+    "textLabelTransactionTime": "取引時間："
 }

@@ -4,7 +4,9 @@ import 'package:abiya_translator/api/responses.dart';
 import 'package:abiya_translator/db/user_manager.dart';
 import 'package:abiya_translator/l10n/app_localizations.dart';
 import 'package:abiya_translator/login_register/login_register_page.dart';
+import 'package:abiya_translator/utils/ui_helper.dart';
 import 'package:abiya_translator/widgets/alert_dialog.dart';
+import 'package:abiya_translator/widgets/list_item.dart';
 import 'package:abiya_translator/widgets/transaction_item.dart';
 import 'package:abiya_translator/widgets/aby_app_bar.dart';
 import 'package:flutter/cupertino.dart';
@@ -24,6 +26,7 @@ class _TransactionListState extends State<TransactionList> {
   List<TransactionItem> transactions = [];
   @override
   Widget build(BuildContext context) {
+    final bool isVerticalUI = UiHelper.isVerticalUI();
     return Scaffold(
         appBar: AbyAppBar(
           titleText: AppLocalizations.of(context)!.textPurchaseHistory,
@@ -35,13 +38,41 @@ class _TransactionListState extends State<TransactionList> {
           ),
         ),
         body: SafeArea(
-          child: SingleChildScrollView(
-            child: Column(children: [
-              for (TransactionItem item in transactions)
-                TransactionItemView(data: item)
-            ]),
-          ),
+          child: isVerticalUI
+              ? Row(
+                  children: [
+                    VerticalTitle(
+                        text:
+                            AppLocalizations.of(context)!.textPurchaseHistory),
+                    Expanded(child: _buildScrollableList(true)),
+                  ],
+                )
+              : _buildScrollableList(false),
         ));
+  }
+
+  /// 竖排传统蒙文：横向滚动 + [Row]；横排：纵向滚动 + [Column]。
+  Widget _buildScrollableList(bool isVerticalUI) {
+    return SingleChildScrollView(
+      scrollDirection: isVerticalUI ? Axis.horizontal : Axis.vertical,
+      padding: isVerticalUI
+          ? const EdgeInsets.only(right: 20)
+          : const EdgeInsets.only(bottom: 20),
+      child: isVerticalUI
+          ? Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                for (TransactionItem item in transactions)
+                  TransactionItemView(data: item)
+              ],
+            )
+          : Column(
+              children: [
+                for (TransactionItem item in transactions)
+                  TransactionItemView(data: item)
+              ],
+            ),
+    );
   }
 
   @override

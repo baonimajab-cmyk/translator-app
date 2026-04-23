@@ -6,6 +6,7 @@ import 'package:abiya_translator/pages/message_list_page.dart';
 import 'package:abiya_translator/pages/phrasebook.dart';
 import 'package:abiya_translator/pages/translation_list_page.dart';
 import 'package:abiya_translator/pages/user_info_page.dart';
+import 'package:abiya_translator/utils/membership_plan_sync.dart';
 import 'package:abiya_translator/utils/system_setting.dart';
 import 'package:abiya_translator/utils/ui_helper.dart';
 import 'package:abiya_translator/widgets/aby_app_bar.dart';
@@ -26,6 +27,14 @@ class PersonalPage extends StatefulWidget {
 
 class _PersonalPageState extends State<PersonalPage> {
   UserManager manager = GetIt.I<UserManager>();
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      syncMembershipPlanFromServer(manager);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -318,17 +327,19 @@ class UserBanner extends StatelessWidget {
             children: [
               Column(
                 children: [
-                  MongolText(
-                    userInfo == null
-                        ? AppLocalizations.of(context)!.textLoginPlaceholder
-                        : userInfo!.name,
-                    style: TextStyle(
-                        fontSize: 16,
-                        color: Theme.of(context).colorScheme.onSurface,
-                        fontFamily: 'NotoSans',
-                        fontWeight: FontWeight.bold),
-                  ),
-                  userInfo == null || !userInfo!.isMember()
+                  Padding(
+                      padding: EdgeInsets.only(left: 6),
+                      child: MongolText(
+                        userInfo == null
+                            ? AppLocalizations.of(context)!.textLoginPlaceholder
+                            : userInfo!.name,
+                        style: TextStyle(
+                            fontSize: 16,
+                            color: Theme.of(context).colorScheme.onSurface,
+                            fontFamily: 'NotoSans',
+                            fontWeight: FontWeight.bold),
+                      )),
+                  userInfo == null
                       ? Container()
                       : Padding(
                           padding: const EdgeInsets.only(top: 4.0),
@@ -336,7 +347,7 @@ class UserBanner extends StatelessWidget {
                             width: 18,
                             height: 18,
                             child: Image.asset(
-                                'assets/images/icon_membership_active_small.png'),
+                                membershipBadgeAsset(userInfo!)),
                           ),
                         )
                 ],
@@ -407,7 +418,7 @@ class UserBanner extends StatelessWidget {
                         color: Theme.of(context).colorScheme.onSurface,
                         fontWeight: FontWeight.bold),
                   ),
-                  userInfo == null || !userInfo!.isMember()
+                  userInfo == null
                       ? Container()
                       : Padding(
                           padding: const EdgeInsets.only(left: 6.0),
@@ -415,7 +426,7 @@ class UserBanner extends StatelessWidget {
                             width: 18,
                             height: 18,
                             child: Image.asset(
-                                'assets/images/icon_membership_active_small.png'),
+                                membershipBadgeAsset(userInfo!)),
                           ),
                         )
                 ],

@@ -498,4 +498,13 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get textGooglePlayProductUnavailable => '当前设备无法使用应用内购买，将尝试显示参考价格。';
+
+  @override
+  String get textLabelTransactionId => '交易编号：';
+
+  @override
+  String get textLabelPaymentMethod => '支付方式：';
+
+  @override
+  String get textLabelTransactionTime => '交易时间：';
 }
