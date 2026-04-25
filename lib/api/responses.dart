@@ -228,15 +228,34 @@ class TransactionVerifyReponse extends CommonReponse {
   late String transactionId;
   late String uuid;
   UserInfo? userInfo;
+
+  /// 验单返回的套餐类型：`1` 月、`2` 季、`3` 年（与商店商品 id 字符串不同）。
+  int? productId;
+
   TransactionVerifyReponse(super.json) {
     transactionTime = data['transaction_time'];
     expirationTime = data['expiration_time'];
     transactionId = data['transaction_id'];
     uuid = data['uuid'] ?? '';
+    productId = (data['product_id'] as num?)?.toInt();
     if (data['user_info'] != null) {
       userInfo = UserInfo.fromJson(data['user_info']);
     } else {
       userInfo = null;
+    }
+  }
+
+  /// 与 [UserInfo.membershipPlan] / `membershipBadgeAsset` 一致：`quarterly` 对应季付。
+  String? get membershipPlanFromProductId {
+    switch (productId) {
+      case 1:
+        return 'monthly';
+      case 2:
+        return 'quarterly';
+      case 3:
+        return 'yearly';
+      default:
+        return null;
     }
   }
 }

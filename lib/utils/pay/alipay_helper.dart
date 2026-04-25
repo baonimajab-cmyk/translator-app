@@ -48,6 +48,7 @@ class AlipayHelper {
       onVerify(response);
     }, onError: (code, msg) {
       ToastHelper.show(msg);
+      onVerify(null);
     });
   }
 }

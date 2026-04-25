@@ -14,11 +14,20 @@ void syncMembershipPlanFromServer(UserManager userManager) {
     apiMembershipPlan,
     {},
     onResponse: (response) {
-      user.membershipPlan = response.plan;
-      if (response.expireDate > 0) {
-        user.membershipExpireDate = response.expireDate;
+      // 验单成功后本地已写入正确到期时间；若支付回调尚未落库，membership_plan 可能仍返回旧
+      // expire_date，直接覆盖会把 isMember() 打回 false（角标变灰）。到期时间取本地与服务端的较大值。
+      final fresh = userManager.getCurrentUser();
+      if (fresh == null) {
+        return;
       }
-      userManager.saveUser(user);
+      fresh.membershipPlan = response.plan;
+      if (response.expireDate > 0) {
+        final merged = response.expireDate > fresh.membershipExpireDate
+            ? response.expireDate
+            : fresh.membershipExpireDate;
+        fresh.membershipExpireDate = merged;
+      }
+      userManager.saveUser(fresh);
     },
     onError: (et, em) {
       Logger.log('membership_plan: $em');

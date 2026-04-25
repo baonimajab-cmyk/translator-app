@@ -37,7 +37,7 @@ class _TransactionListState extends State<TransactionList> {
             ),
           ),
         ),
-        body: SafeArea(
+        body: Container(
           child: isVerticalUI
               ? Row(
                   children: [

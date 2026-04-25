@@ -317,18 +317,26 @@ class MembershipPageState extends State<MembershipPage> {
 
   void deliverProduct(TransactionVerifyReponse response) {
     Logger.log('expires at : ${response.expirationTime}');
+    final planFromVerify = response.membershipPlanFromProductId;
     UserInfo? info = userManager.getCurrentUser();
     if (info != null) {
       info.membershipExpireDate = response.expirationTime;
+      if (planFromVerify != null) {
+        info.membershipPlan = planFromVerify;
+      }
       userManager.saveUser(info);
       syncMembershipPlanFromServer(userManager);
       userManager.setLastTransactionUuid(info.uuid);
       userManager.setLastTransactionId(response.transactionId);
     } else {
       if (response.userInfo != null) {
-        userManager.saveUser(response.userInfo!);
+        final guest = response.userInfo!;
+        if (planFromVerify != null) {
+          guest.membershipPlan = planFromVerify;
+        }
+        userManager.saveUser(guest);
         syncMembershipPlanFromServer(userManager);
-        userManager.setLastTransactionUuid(response.userInfo!.uuid);
+        userManager.setLastTransactionUuid(guest.uuid);
         userManager.setLastTransactionId(response.transactionId);
       }
     }
