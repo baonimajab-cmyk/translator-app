@@ -346,8 +346,7 @@ class UserBanner extends StatelessWidget {
                           child: SizedBox(
                             width: 18,
                             height: 18,
-                            child: Image.asset(
-                                membershipBadgeAsset(userInfo!)),
+                            child: Image.asset(membershipBadgeAsset(userInfo!)),
                           ),
                         )
                 ],
@@ -425,8 +424,7 @@ class UserBanner extends StatelessWidget {
                           child: SizedBox(
                             width: 18,
                             height: 18,
-                            child: Image.asset(
-                                membershipBadgeAsset(userInfo!)),
+                            child: Image.asset(membershipBadgeAsset(userInfo!)),
                           ),
                         )
                 ],

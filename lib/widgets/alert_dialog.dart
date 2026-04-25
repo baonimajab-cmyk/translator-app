@@ -1,4 +1,3 @@
-import 'package:abiya_translator/utils/themes.dart';
 import 'package:abiya_translator/utils/ui_helper.dart';
 import 'package:abiya_translator/widgets/rounded_button.dart';
 import 'package:flutter/material.dart';

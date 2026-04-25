@@ -28,8 +28,12 @@ class UserManager {
 
   void saveUser(UserInfo user) async {
     SharedPreferences preferences = await SharedPreferences.getInstance();
-    preferences.setString(userKey, jsonEncode(user.toJson()));
-    notifier.value = user;
+    final jsonStr = jsonEncode(user.toJson());
+    preferences.setString(userKey, jsonStr);
+    // 必须用新实例赋值：各处常对 getCurrentUser() 原地改字段后再 save；
+    // 若引用与 notifier.value 相同，ValueNotifier 不会 notify，其它页的
+    // ValueListenableBuilder 不会重建（会员页因 setState 仍会刷新，造成不一致）。
+    notifier.value = UserInfo.fromJson(json.decode(jsonStr));
   }
 
   void logout() async {
